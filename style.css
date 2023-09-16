@@ -86,13 +86,13 @@ nav a:hover{
 footer{
     text-align: center;
     background: url(imagenes/bg.jpg);
-    padding:40px;
+    padding:40p x;
 }
 
 .copyright{
     color:#FFFFFF;
     font-size: 13px;
-    margin: 20px;
+    padding: 20px;
 }
 
 .main-contacto{
