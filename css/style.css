@@ -16,15 +16,16 @@ header{
     padding: 20px 0;
 }
 
-#selecter{
-    border-color: #088c19;
-}
 
 .caja{
     width: 940px;
     position: relative;
     margin: 0 auto;
     height: 150px;
+}
+
+.caja .selecter a.active{
+    border-color: #088c19;
 }
 
 .logo{
@@ -57,6 +58,7 @@ nav a:hover{
     text-decoration: underline;
 }
 
+#selected {color: white ; text-decoration: underline;}
 
 /* CSS para nuestra pagina inicial*/
 
@@ -325,7 +327,7 @@ td, th{
     margin-bottom: 2rem;
 }
 
-.footer .box-container .content h1{
+.footer .box-container .content h1{ 
     display: flex;
     align-items: center;
     font-size: 20px;
@@ -344,6 +346,7 @@ td, th{
     font-size: 16px;
     color: var(--black);
     padding: 1rem 0;
+    text-decoration: none;
 }
 
 .footer .box-container .box a i{
@@ -353,6 +356,10 @@ td, th{
 
 .footer .box-container .box a:hover i{
     padding-right: 2rem;
+}
+
+.footer .box-container .box .fas fa-map{
+    font-weight: bold
 }
 
 .footer .share{
@@ -381,9 +388,9 @@ td, th{
     margin-top: 1rem;
     padding-bottom: 2rem;
     color: var(--black);
-    text-align: center;
-    
+    text-align: center;   
 }
+
 
 .copyright{
     color:#FFFFFF;
