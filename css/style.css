@@ -100,7 +100,7 @@ nav a:hover{
 
 .mapa{
     padding: 3em 0;
-    background: linear-gradient(#FEFEFE, #888888);
+    background: linear-gradient(#BBBBBB, #181616);
 }
 
 .mapa p{
@@ -115,7 +115,7 @@ nav a:hover{
 
 .diferenciales{
     padding: 3em 0;
-    background: #888888;
+    background: linear-gradient(#FEFEFE, #181616);;
 }
 
 .contenido-diferenciales{
@@ -241,14 +241,22 @@ nav a:hover{
     margin-top:10px;
 }
 
+.formulario{
+    background: linear-gradient(#BBBBBB, #181616);
+    margin: 0px auto;
+    padding: 40px;
+}
 
 .main-contacto{
     width: 940px;
     margin: 0 auto;
 }
 
+
+
 form{
     margin: 40px 0;
+    
 }
 
 form label, form legend{
@@ -292,7 +300,7 @@ form label, form legend{
 }
 
 table{
-    margin: 40px 40px;
+    margin: 40px 40px 0px 40px;
 }
 
 thead{
