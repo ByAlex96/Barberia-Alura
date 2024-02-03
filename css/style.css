@@ -143,7 +143,6 @@ nav a:hover {
     align-content: center;
     margin: 100px;
     gap: 20px;
-
 }
 
 .imagen-diferenciales {
@@ -315,6 +314,11 @@ form legend {
     margin: 0 0 20px;
     padding: 10px 25px;
     width: 50%;
+}
+
+/* Le damos 20 px de espacio entre lo iconos para que no se vea muy junto*/
+#radio-whatsapp {
+    margin-bottom: 20px;
 }
 
 .checkbox {
