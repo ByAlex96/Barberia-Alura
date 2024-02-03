@@ -306,7 +306,7 @@ form {
 }
 
 /*damos tamaño a los cuadros*/
-form label,
+form div,
 form legend {
     display: block;
     font-size: 20px;
