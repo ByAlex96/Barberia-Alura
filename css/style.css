@@ -274,6 +274,7 @@ nav a:hover {
     grid-auto-rows: 250px;
     gap: 4px;
     padding: 0px 50px;
+    margin: 2rem;
 }
 
 .container div {
@@ -327,15 +328,20 @@ nav a:hover {
 /*Comenzamos a dar estilos la web presupuesto.html*/
 /*En primer lugar ulizamos el linear-gradient nuevamente para dar un mejor aspecto al background*/
 .formulario {
+    width: 100%;
     background: linear-gradient(#BBBBBB, #181616);
     margin: 0px auto;
-    padding: 40px;
 }
 
 .main-contacto {
-    width: 940px;
+    width: 100%;
     margin: 0 auto;
 }
+
+.formulario .main-contacto form input {
+    size: 80%;
+}
+
 
 form {
     margin: 40px 0;
@@ -353,7 +359,7 @@ form legend {
     display: block;
     margin: 0 0 20px;
     padding: 10px 25px;
-    width: 50%;
+    width: 70%;
 }
 
 /* Le damos 20 px de espacio entre lo iconos para que no se vea muy junto*/
@@ -513,6 +519,9 @@ th {
 
 /*Usamos el elemento linear-gradient para dar un mejor aspecto a la web implementandolo en el background*/
 .mapa {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
     padding: 3em 0;
     background: linear-gradient(#BBBBBB, #181616);
 }
@@ -525,6 +534,12 @@ th {
 .mapa-contenido {
     width: 100%;
     margin: 10 auto;
+}
+
+.frame {
+    margin-left: 2rem;
+    width: 95%;
+    height: 95%;
 }
 
 /*media queries for web responsive*/
@@ -649,6 +664,12 @@ th {
         height: 200px;
     }
 
+    .mapa .frame {
+        margin-left: 2rem;
+        width: 80%;
+        height: 80%;
+    }
+
     .productos {
         display: flex;
         flex-flow: column wrap;
@@ -674,6 +695,15 @@ th {
             repeat(4, 1fr);
         grid-auto-rows: 140px;
         gap: 2px;
-        padding: 0px 50px;
+        padding: 0 0.5rem;
+        margin: 0.5rem 0;
+    }
+
+    .formulario {
+        width: auto;
+    }
+
+    .enviar {
+        width: 80%;
     }
 }
