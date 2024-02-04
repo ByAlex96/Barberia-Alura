@@ -487,6 +487,10 @@ th {
 
 /*media queries for web responsive*/
 @media screen and (max-width: 768px) {
+    * {
+        margin: 0;
+    }
+
     html {
         margin: 0;
     }
@@ -566,6 +570,8 @@ th {
 
     /* Footer responsive */
     .footer {
+        width: 100%;
+        height: auto;
         padding: 20px 10px;
     }
 
