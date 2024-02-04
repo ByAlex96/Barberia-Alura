@@ -32,6 +32,7 @@ body {
 }
 
 header {
+    width: 100%;
     background-color: #BBBBBB;
     padding: 20px 0 0;
     margin: 0;
@@ -40,7 +41,7 @@ header {
 
 
 .caja {
-    width: 940px;
+    width: 90%;
     position: relative;
     margin: 0 auto;
     height: 150px;
@@ -93,10 +94,6 @@ nav a:hover {
     height: auto;
 }
 
-.principal {
-    width: 100%;
-    height: auto;
-}
 
 /* CSS para nuestra pagina inicial*/
 
@@ -108,14 +105,13 @@ nav a:hover {
 .principal {
     padding: 3em 0;
     background: #FEFEFE;
-    width: 940px;
-    margin: 0 auto;
+    width: 100%;
+    height: auto;
 }
 
 .titulo-principal {
     text-align: center;
     font-size: 2em;
-    margin: 0 0 1em;
     clear: left;
     font-weight: bold;
 }
@@ -140,7 +136,6 @@ nav a:hover {
 
 
 /* Contenido principal responsive */
-.principal,
 .diferenciales {
     padding: 2em 10px;
     width: 100%;
@@ -152,11 +147,10 @@ nav a:hover {
     height: auto;
     padding: 3em 0;
     background: linear-gradient(#FEFEFE, #181616);
-    ;
 }
 
 .contenido-diferenciales {
-    width: 640px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -164,6 +158,10 @@ nav a:hover {
     width: 100%;
     display: inline-block;
     vertical-align: top;
+}
+
+.lista-diferenciales li {
+    margin-left: 1em;
 }
 
 .items {
@@ -181,16 +179,16 @@ nav a:hover {
 
 /*Utilizamos la sentencia Flex para dar forma a las imagenes que tenemos en la caja*/
 .caja-diferenciales {
+    width: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: wrap;
     justify-content: center;
     align-content: center;
-    margin: 100px;
+    margin: 30px 0;
     gap: 20px;
 }
 
 .imagen-diferenciales {
-    width: 50%;
     transition: 400ms;
     box-shadow: 10px 10px 30px 15px #d6981c, -10px -10px 30px 15px #d6981c;
     margin: 0 0 0 50px;
@@ -429,8 +427,8 @@ th {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(8px, 1fr));
     /*repite el cuadro de 10px como mínimo y máximo 1 fracción*/
-    gap: 1.5rem;
-    padding: 2rem 1rem;
+    gap: 0.5rem;
+    padding: 2rem 0.5rem;
 }
 
 /*utilizamos flex para darle la orientación de columna a los elementos*/
@@ -438,6 +436,13 @@ th {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+}
+
+.footer .box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .footer .box-container .content h1 {
@@ -463,7 +468,7 @@ th {
 }
 
 .footer .box-container .box a i {
-    padding-right: .5rem;
+    /* padding-right: .5rem; */
     color: var(--black);
 }
 
@@ -560,7 +565,7 @@ th {
         width: 100%;
 
         margin: 0 auto;
-        height: auto;
+        height: 150px;
     }
 
     .logo {
@@ -579,9 +584,8 @@ th {
     }
 
     /* Contenido principal responsive */
-    .principal,
     .diferenciales {
-        padding: 2em 10px;
+        padding: 2em 0;
         width: 100%;
     }
 
@@ -596,12 +600,10 @@ th {
         flex-direction: column;
         align-items: center;
         margin: 50px 0;
-        width: 50%;
         gap: 10px;
     }
 
     .imagen-diferenciales {
-        width: 100%;
         margin: 0 0 20px;
     }
 
@@ -614,13 +616,20 @@ th {
     .video {
         width: 100%;
         margin: 1em 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .video .frame {
+        width: 300px;
+        height: 200px;
     }
 
     /* Footer responsive */
     .footer {
         width: 100%;
         height: auto;
-        padding: 20px 10px;
+        padding: 20px 0;
     }
 
     /* Ajustes específicos para dispositivos pequeños */
@@ -663,7 +672,7 @@ th {
             width: 100%;
             position: relative;
             margin: 0 auto;
-            height: auto;
+            height: 150px;
         }
 
         .logo {
@@ -682,9 +691,8 @@ th {
         }
 
         /* Contenido principal responsive */
-        .principal,
         .diferenciales {
-            padding: 2em 10px;
+            padding: 2em 0;
             width: 100%;
         }
 
@@ -699,12 +707,10 @@ th {
             flex-direction: column;
             align-items: center;
             margin: 50px 0;
-            width: 50%;
             gap: 10px;
         }
 
         .imagen-diferenciales {
-            width: 100%;
             margin: 0 0 20px;
         }
 
