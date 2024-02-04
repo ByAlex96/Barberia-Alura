@@ -624,7 +624,7 @@ th {
         height: 200px;
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 410px) {
         * {
             margin: 0;
         }
