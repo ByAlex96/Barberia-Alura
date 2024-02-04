@@ -474,3 +474,41 @@ th {
     width: 940px;
     margin: 0 auto;
 }
+
+/*media queries for web responsive*/
+@media (min-width:410px) and (max-width: 920px) {
+    * {
+        margin: 0;
+    }
+
+    body {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1.3rem 3rem;
+    }
+
+    .principal {
+        padding: 3em 0;
+        background: #FEFEFE;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .caja {
+        width: 80%;
+        position: relative;
+        margin: 0 auto;
+        height: 80%;
+    }
+
+    .caja-diferenciales {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0;
+        width: 80%;
+        gap: 10px;
+    }
+}
