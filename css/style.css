@@ -10,6 +10,7 @@
 /*Estilos de la web index.html*/
 body {
     font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px;
 }
 
 header {
@@ -69,6 +70,7 @@ nav a:hover {
 
 .banner {
     width: 100%;
+    height: auto;
 }
 
 .principal {
@@ -104,6 +106,12 @@ nav a:hover {
     margin: 0 20px 20px 0;
 }
 
+/* Contenido principal responsive */
+.principal,
+.diferenciales {
+    padding: 2em 10px;
+    width: 100%;
+}
 
 .diferenciales {
     padding: 3em 0;
@@ -117,7 +125,7 @@ nav a:hover {
 }
 
 .lista-diferenciales {
-    width: 40%;
+    width: 100%;
     display: inline-block;
     vertical-align: top;
 }
@@ -476,50 +484,135 @@ th {
 }
 
 /*media queries for web responsive*/
-@media (min-width:400px) and (max-width: 920px) {
-    * {
-        margin: 0;
-    }
+@media screen and (max-width: 1024px) {
 
+    /* Ajustes generales */
     body {
-        font-size: 55%;
+        font-size: 16px;
+        /* Tamaño de fuente base */
     }
 
+    /* Estilos de la web index.html */
+    /* ... (tu código actual) ... */
+
+    /* Haciendo el header responsive */
     header {
-        padding: 1.3rem 3rem;
-    }
-
-    .principal {
-        padding: 3em 0;
-        background: #FEFEFE;
-        width: 80%;
-        margin: 0 auto;
+        padding: 10px 0;
     }
 
     .caja {
-        width: 80%;
-        position: relative;
-        margin: 0 auto;
-        height: 80%;
+        height: auto;
     }
 
     .logo {
-        cursor: pointer;
-        height: 80%;
-        width: 80%;
+        height: 100px;
+        width: 100px;
     }
 
+    nav {
+        top: 70px;
+    }
+
+    /* Banner responsive */
+    .banner {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Contenido principal responsive */
+    .principal,
     .diferenciales {
-        display: flex;
+        padding: 2em 10px;
+        width: 100%;
+    }
+
+    /* Lista de diferenciales en dispositivos pequeños */
+    .lista-diferenciales {
+        width: 100%;
+    }
+
+    /* Imágenes diferenciales en dispositivos pequeños */
+    .caja-diferenciales {
         flex-direction: column;
         align-items: center;
-        margin: 50px 0;
-        width: 80%;
-        gap: 10px;
+        margin: 20px 0;
     }
 
+    .imagen-diferenciales {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    /* Video responsive */
+    .video {
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    /* Footer responsive */
     .footer {
-        width: 80%;
-        height: 80%;
+        padding: 20px 10px;
+    }
+
+    /* Ajustes específicos para dispositivos pequeños */
+    @media screen and (max-width: 768px) {
+        .caja {
+            width: 90%;
+        }
+
+        .logo {
+            height: 80px;
+            width: 80px;
+        }
+
+        nav {
+            top: 60px;
+        }
+
+        .banner {
+            height: auto;
+        }
+
+        .principal,
+        .diferenciales {
+            padding: 2em 5px;
+        }
+
+        .lista-diferenciales,
+        .items {
+            font-size: 14px;
+        }
+
+        .imagen-diferenciales {
+            margin: 0 0 10px;
+        }
+
+        .video {
+            margin: 1em 0;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .caja {
+            width: 95%;
+        }
+
+        .logo {
+            height: 60px;
+            width: 60px;
+        }
+
+        nav {
+            top: 50px;
+        }
+
+        .lista-diferenciales,
+        .items {
+            font-size: 12px;
+        }
+
+        .video {
+            margin: 0.5em 0;
+        }
     }
 }
