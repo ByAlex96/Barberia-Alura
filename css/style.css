@@ -7,16 +7,35 @@
     --white: #F0F0F0;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
 /*Estilos de la web index.html*/
+/*Iniciamos con grid para tener una web responsive*/
 body {
+    display: grid;
+    grid-template-areas:
+        "my-header"
+        "my-main"
+        "my-footer";
     font-family: 'Montserrat', sans-serif !important;
     font-size: 16px;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
+    margin: 0;
+    width: 100%;
+    height: auto;
 }
 
 header {
     background-color: #BBBBBB;
     padding: 20px 0 0;
     margin: 0;
+    grid-area: my-header;
 }
 
 
@@ -68,6 +87,17 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.main {
+    grid-area: "my-main";
+    width: 100%;
+    height: auto;
+}
+
+.principal {
+    width: 100%;
+    height: auto;
+}
+
 /* CSS para nuestra pagina inicial*/
 
 .banner {
@@ -108,6 +138,7 @@ nav a:hover {
     margin: 0 20px 20px 0;
 }
 
+
 /* Contenido principal responsive */
 .principal,
 .diferenciales {
@@ -116,6 +147,9 @@ nav a:hover {
 }
 
 .diferenciales {
+    grid-area: "my-section";
+    width: 100%;
+    height: auto;
     padding: 3em 0;
     background: linear-gradient(#FEFEFE, #181616);
     ;
@@ -379,7 +413,11 @@ th {
 }
 
 /*Ingresamos mediante url la imagen del footer y los estilos*/
+
 .footer {
+    grid-area: "my-footer";
+    width: 100%;
+    height: auto;
     background: url(../imagenes/bg.jpg) no-repeat;
     padding: 20px 0;
     background-size: cover;
@@ -389,7 +427,7 @@ th {
 /*Utilizamos grid para organizar de la mejor manera los contenedores del .box-container*/
 .footer .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(8px, 1fr));
     /*repite el cuadro de 10px como mínimo y máximo 1 fracción*/
     gap: 1.5rem;
     padding: 2rem 1rem;
@@ -405,13 +443,13 @@ th {
 .footer .box-container .content h1 {
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 1rem;
     color: var(--black);
 }
 
 .footer .box-container .box h3 {
     font-weight: bold;
-    font-size: 22px;
+    font-size: 1rem;
     color: var(--black);
     padding: 1rem 0;
 }
@@ -481,8 +519,8 @@ th {
 }
 
 .mapa-contenido {
-    width: 940px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 10 auto;
 }
 
 /*media queries for web responsive*/
@@ -497,8 +535,18 @@ th {
 
     /* Ajustes generales */
     body {
+        display: grid;
+        grid-template-areas:
+            "my-header"
+            "my-main"
+            "my-footer";
+        font-family: 'Montserrat', sans-serif !important;
         font-size: 14px;
-        /* Tamaño de fuente base */
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 100%;
+        margin: 0;
+        width: 100%;
+        height: auto;
     }
 
     /* Haciendo el header responsive */
@@ -510,7 +558,7 @@ th {
 
     .caja {
         width: 100%;
-        position: relative;
+
         margin: 0 auto;
         height: auto;
     }
@@ -578,24 +626,74 @@ th {
     /* Ajustes específicos para dispositivos pequeños */
 
     @media screen and (max-width: 480px) {
+        html {
+            margin: 0;
+            width: 100%;
+            height: auto;
+        }
+
         .caja {
-            width: 95%;
+            display: inline;
+        }
+
+        /* Ajustes generales */
+        body {
+            display: grid;
+            grid-template-areas:
+                "my-header my-header my-header"
+                "my-main my-main my-main"
+                "my-footer";
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 12px;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: 100%;
+            margin: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Haciendo el header responsive */
+        header {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+        }
+
+        .caja {
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+            height: auto;
         }
 
         .logo {
-            height: 60px;
-            width: 60px;
+            height: 100px;
+            width: 100px;
         }
 
+        nav {
+            top: 70px;
+        }
+
+        /* Banner responsive */
         .banner {
             width: 100%;
             height: auto;
         }
 
-        nav {
-            top: 50px;
+        /* Contenido principal responsive */
+        .principal,
+        .diferenciales {
+            padding: 2em 10px;
+            width: 100%;
         }
 
+        /* Lista de diferenciales en dispositivos pequeños */
+        .lista-diferenciales {
+            width: 100%;
+        }
+
+        /* Imágenes diferenciales en dispositivos pequeños */
         .caja-diferenciales {
             display: flex;
             flex-direction: column;
@@ -605,14 +703,39 @@ th {
             gap: 10px;
         }
 
-
-        .lista-diferenciales,
-        .items {
-            font-size: 12px;
+        .imagen-diferenciales {
+            width: 100%;
+            margin: 0 0 20px;
         }
 
+        .main {
+            width: 100%;
+            height: auto;
+        }
+
+        .section {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Video responsive */
         .video {
-            margin: 0.5em 0;
+            width: 100%;
+            height: auto;
+            margin: 0;
+        }
+
+        .mapa {
+            width: 100%;
+            height: auto;
+            padding: 10px 0;
+        }
+
+        /* Footer responsive */
+        .footer {
+            width: 100%;
+            height: auto;
+            padding: 20px 10px;
         }
     }
 }
