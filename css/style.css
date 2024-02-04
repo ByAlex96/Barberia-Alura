@@ -476,7 +476,7 @@ th {
 }
 
 /*media queries for web responsive*/
-@media (min-width:410px) and (max-width: 920px) {
+@media (min-width:400px) and (max-width: 920px) {
     * {
         margin: 0;
     }
