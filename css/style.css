@@ -15,7 +15,8 @@ body {
 
 header {
     background-color: #BBBBBB;
-    padding: 20px 0;
+    padding: 20px 0 0;
+    margin: 0;
 }
 
 
@@ -31,6 +32,7 @@ header {
 }
 
 .logo {
+    position: absolute;
     cursor: pointer;
     height: 150px;
     width: 150px;
@@ -38,7 +40,7 @@ header {
 
 nav {
     position: absolute;
-    top: 110px;
+    top: 80px;
     right: 0;
 }
 
@@ -484,23 +486,28 @@ th {
 }
 
 /*media queries for web responsive*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
+    html {
+        margin: 0;
+    }
 
     /* Ajustes generales */
     body {
-        font-size: 16px;
+        font-size: 14px;
         /* Tamaño de fuente base */
     }
 
-    /* Estilos de la web index.html */
-    /* ... (tu código actual) ... */
-
     /* Haciendo el header responsive */
     header {
+        display: flex;
+        flex-direction: column;
         padding: 10px 0;
     }
 
     .caja {
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
         height: auto;
     }
 
@@ -533,14 +540,22 @@ th {
 
     /* Imágenes diferenciales en dispositivos pequeños */
     .caja-diferenciales {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 20px 0;
+        margin: 50px 0;
+        width: 50%;
+        gap: 10px;
     }
 
     .imagen-diferenciales {
         width: 100%;
         margin: 0 0 20px;
+    }
+
+    .main {
+        width: 100%;
+        height: auto;
     }
 
     /* Video responsive */
@@ -555,42 +570,6 @@ th {
     }
 
     /* Ajustes específicos para dispositivos pequeños */
-    @media screen and (max-width: 768px) {
-        .caja {
-            width: 90%;
-        }
-
-        .logo {
-            height: 80px;
-            width: 80px;
-        }
-
-        nav {
-            top: 60px;
-        }
-
-        .banner {
-            height: auto;
-        }
-
-        .principal,
-        .diferenciales {
-            padding: 2em 5px;
-        }
-
-        .lista-diferenciales,
-        .items {
-            font-size: 14px;
-        }
-
-        .imagen-diferenciales {
-            margin: 0 0 10px;
-        }
-
-        .video {
-            margin: 1em 0;
-        }
-    }
 
     @media screen and (max-width: 480px) {
         .caja {
@@ -602,9 +581,24 @@ th {
             width: 60px;
         }
 
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+
         nav {
             top: 50px;
         }
+
+        .caja-diferenciales {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+            width: 50%;
+            gap: 10px;
+        }
+
 
         .lista-diferenciales,
         .items {
