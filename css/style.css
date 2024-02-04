@@ -425,7 +425,7 @@ th {
 /*Utilizamos grid para organizar de la mejor manera los contenedores del .box-container*/
 .footer .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     /*repite el cuadro de 10px como mínimo y máximo 1 fracción*/
     gap: 0.5rem;
     padding: 2rem 0.5rem;
@@ -442,7 +442,6 @@ th {
     width: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 .footer .box-container .content h1 {
@@ -625,35 +624,24 @@ th {
         height: 200px;
     }
 
-    /* Footer responsive */
-    .footer {
-        width: 100%;
-        height: auto;
-        padding: 20px 0;
-    }
-
-    /* Ajustes específicos para dispositivos pequeños */
-
     @media screen and (max-width: 480px) {
-        html {
+        * {
             margin: 0;
-            width: 100%;
-            height: auto;
         }
 
-        .caja {
-            display: inline;
+        html {
+            margin: 0;
         }
 
         /* Ajustes generales */
         body {
             display: grid;
             grid-template-areas:
-                "my-header my-header my-header"
-                "my-main my-main my-main"
+                "my-header"
+                "my-main"
                 "my-footer";
             font-family: 'Montserrat', sans-serif !important;
-            font-size: 12px;
+            font-size: 14px;
             grid-template-rows: auto auto auto;
             grid-template-columns: 100%;
             margin: 0;
@@ -670,7 +658,7 @@ th {
 
         .caja {
             width: 100%;
-            position: relative;
+
             margin: 0 auto;
             height: 150px;
         }
@@ -719,29 +707,17 @@ th {
             height: auto;
         }
 
-        .section {
-            width: 100%;
-            height: 100%;
-        }
-
         /* Video responsive */
         .video {
             width: 100%;
-            height: auto;
-            margin: 0;
+            margin: 1em 0;
+            display: flex;
+            justify-content: center;
         }
 
-        .mapa {
-            width: 100%;
-            height: auto;
-            padding: 10px 0;
-        }
-
-        /* Footer responsive */
-        .footer {
-            width: 100%;
-            height: auto;
-            padding: 20px 10px;
+        .video .frame {
+            width: 300px;
+            height: 200px;
         }
     }
 }
