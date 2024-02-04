@@ -528,7 +528,7 @@ th {
 }
 
 /*media queries for web responsive*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     * {
         margin: 0;
     }
@@ -562,7 +562,6 @@ th {
 
     .caja {
         width: 100%;
-
         margin: 0 auto;
         height: 150px;
     }
@@ -623,101 +622,5 @@ th {
         width: 300px;
         height: 200px;
     }
-
-    @media screen and (max-width: 480px) {
-        * {
-            margin: 0;
-        }
-
-        html {
-            margin: 0;
-        }
-
-        /* Ajustes generales */
-        body {
-            display: grid;
-            grid-template-areas:
-                "my-header"
-                "my-main"
-                "my-footer";
-            font-family: 'Montserrat', sans-serif !important;
-            font-size: 14px;
-            grid-template-rows: auto auto auto;
-            grid-template-columns: 100%;
-            margin: 0;
-            width: 100%;
-            height: auto;
-        }
-
-        /* Haciendo el header responsive */
-        header {
-            display: flex;
-            flex-direction: column;
-            padding: 10px 0;
-        }
-
-        .caja {
-            width: 100%;
-
-            margin: 0 auto;
-            height: 150px;
-        }
-
-        .logo {
-            height: 100px;
-            width: 100px;
-        }
-
-        nav {
-            top: 70px;
-        }
-
-        /* Banner responsive */
-        .banner {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Contenido principal responsive */
-        .diferenciales {
-            padding: 2em 0;
-            width: 100%;
-        }
-
-        /* Lista de diferenciales en dispositivos pequeños */
-        .lista-diferenciales {
-            width: 100%;
-        }
-
-        /* Imágenes diferenciales en dispositivos pequeños */
-        .caja-diferenciales {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 50px 0;
-            gap: 10px;
-        }
-
-        .imagen-diferenciales {
-            margin: 0 0 20px;
-        }
-
-        .main {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Video responsive */
-        .video {
-            width: 100%;
-            margin: 1em 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .video .frame {
-            width: 300px;
-            height: 200px;
-        }
-    }
+}
 }
