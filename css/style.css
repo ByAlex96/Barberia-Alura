@@ -425,7 +425,7 @@ th {
 /*Utilizamos grid para organizar de la mejor manera los contenedores del .box-container*/
 .footer .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     /*repite el cuadro de 10px como mínimo y máximo 1 fracción*/
     gap: 0.5rem;
     padding: 2rem 0.5rem;
@@ -624,7 +624,7 @@ th {
         height: 200px;
     }
 
-    @media screen and (max-width: 410px) {
+    @media screen and (max-width: 480px) {
         * {
             margin: 0;
         }
