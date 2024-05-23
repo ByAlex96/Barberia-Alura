@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo insertBefore</title>
+</head>
+
+<body>
+    <div>
+        <span id="segundo">y luego se hace la tortilla</span>
+    </div>
+    <script type="text/JavaScript">
+	        // creamos un elemento nuevo span
+	        var nuevo = document.createElement("span");
+	        // creamos un texto dentro del span nuevo
+	        var texto_nuevo = document.createTextNode("primero se baten los huevos ");
+	        // insertamos el texto nuevo en el span nuevo
+	        nuevo.appendChild(texto_nuevo);
+	        var antiguo = document.getElementById("segundo");
+	        var padre = antiguo.parentNode;
+	        // por último usamos la función para insertar el texto
+	        padre.insertBefore(nuevo, antiguo);
+	    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function calcula(formulario) {
+            formulario.resultado.value = eval(formulario.operaciones.value);
+        }
+    </script>
+</head>
+
+<body>
+    <form name="calculadora">
+        Cadena de operaciones
+        <input type="text" name="operaciones" /><br>
+        Resultado:
+        <input type="text" name="resultado" /><br>
+        <input type="button" value="Calcular" onClick="calcula(this.form)">
+    </form>
+</body>
+
+</html>

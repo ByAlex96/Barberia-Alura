@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Estilos y Javascript</title>
+    <!-- creamos es estilo de la caja -->
+    <style>
+        #caja {
+            position: absolute;
+            visibility: hidden;
+            font-size: 11px;
+            border: 1px solid #1d158f;
+            background-color: #c9c6f5;
+            width: 120px;
+            padding: 4px;
+        }
+    </style>
+    <script type="text/javascript">
+        function mostrar(valor, arriba, izquierda) {
+            //insertamos el texto pasado a la caja
+            document.getElementById("caja").innerHTML = valor;
+            //posicionamos la caja justo debajo del enlace
+            document.getElementById("caja").style.top = arriba + 19;
+            document.getElementById("caja").style.left = izquierda;
+            //hacemos la caja visible
+            document.getElementById("caja").style.visibility = "visible";
+        }
+        function ocultar() {
+            //hacemos la caja invisible al ocultarla
+            document.getElementById("caja").style.visibility = "hidden";
+        }
+    </script>
+</head>
+
+<body>
+    <div style="position:relative;float:left;width:500px;text-align:justify;">
+        La primera parte se imprimió en
+        <a href="#" onmouseover="mostrar('Madrid es la capital de españa',this.offsetTop,this.offsetLeft)"
+            onmouseout="ocultar()">Madrid,</a>
+        en casa de Juan de la Cuesta, a finales de 1604. Se sospecha, sin embargo,
+        que existió una novela más corta, que sería una de sus futuras Novelas
+        ejemplares. Fue divulgada o impresa con el título El ingenioso hidalgo de
+        la Mancha. Esa publicación se ha perdido, pues autores como Francisco
+        <a href="#" onmouseover="mostrar('Escritor español reconocido a nivel mundial',
+                        this.offsetTop,this.offsetLeft)" onmouseout="ocultar()">López de Úbeda </a>
+        o Lope de Vega,entre otros testimonios, aluden a la fama de esta pieza.
+        <div id="caja"> </div>
+    </div>
+</body>
+
+</html>

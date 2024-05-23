@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/JavaScript">
+	        function empleado(antigüedad, precioHora, horas){
+	            this.antigüedad = antigüedad;
+	            this.precioHora = precioHora;
+	            this.horas = horas;
+	        }
+	    </script>
+</head>
+
+<body>
+    Creación de un objeto en JavaScript <br />y muestra de sus propiedades:<br /><br />
+    <script type="text/JavaScript">
+	        empleado1 = new empleado('1980',23,6);
+	        for (var i in empleado1){
+	            document.write("empleado1." + i + " = " + empleado1[i] + "<br/>");
+	        }
+	    </script>
+</body>
+
+</html>

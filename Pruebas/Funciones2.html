@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function miCalculadora(operador) {
+            resultado = 0;
+            //a partir del argumento 1 en adelante, argumento 0 es la operación
+            for (var i = 1; i < arguments.length; i++) {
+                switch (operador) {
+                    case "+":
+                        resultado = resultado + parseFloat(arguments[i]);
+                        break;
+                    case "-":
+                        resultado = resultado - parseFloat(arguments[i]);
+                        break;
+                    case "*":
+                        if (resultado == 0) { resultado = 1; } //evitar multiplicar por 0
+                        resultado = resultado * parseFloat(arguments[i]);
+                        break;
+                }
+            }
+            return resultado;
+        }
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        alert(miCalculadora("+", "6", "23", "1", "67"));
+        alert(miCalculadora("-", "567", "2", "32", "2"));
+        alert(miCalculadora("*", "3", "2", "34", "2"));
+    </script>
+</body>
+
+</html>

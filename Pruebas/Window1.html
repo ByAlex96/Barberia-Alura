@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de evento dinámico</title>
+    <script type="text/JavaScript">
+                //variable para contener la referencia a la nueva ventana
+                var nuevaVentana;
+	        function abrirVentana(){
+                    nuevaVentana = window.open(
+                        'http://www.google.com', 
+                        'pruebas',
+                        'width=200,height=200,status=no,toolbar=no,top=300,left=300'
+                    );
+	        }
+                function cerrarVentana(){
+                    nuevaVentana.close();
+                }
+	    </script>
+</head>
+
+<body>
+    <input type="button" onclick="abrirVentana()" value="abrir" />
+    <input type="button" onclick="cerrarVentana()" value="cerrar" />
+</body>
+
+</html>

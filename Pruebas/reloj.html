@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reloj con Javascript</title>
+    <script language="JavaScript">
+        function mueveReloj() {
+            momentoActual = new Date()
+            hora = momentoActual.getHours()
+            minuto = momentoActual.getMinutes()
+            segundo = momentoActual.getSeconds()
+            horaImprimible = hora + " : " + minuto + " : " + segundo
+            document.getElementById("reloj").value = horaImprimible
+        }
+    </script>
+</head>
+
+<body onload="mueveReloj()">
+    Vemos aquí el reloj funcionando...
+    <form name="form_reloj">
+        <input type="text" name="reloj" id="reloj" size="10">
+        <input type="button" name="rf" value="refrescar" onclick="mueveReloj()"/>
+    </form>
+</body>
+
+</html>

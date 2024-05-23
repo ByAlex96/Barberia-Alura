@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/JavaScript">
+	        function sueldo_mensual(){
+	            document.write('Sueldo mensual : ' + this.precioHora * this.horas * 30)
+	        }
+	        function empleado(antigüedad, precioHora, horas){
+	            this.antigüedad = antigüedad;
+	            this.precioHora = precioHora;
+	            this.horas = horas;
+	            this.sueldo_mensual = sueldo_mensual;
+	        }
+	    </script>
+</head>
+
+<body>
+    Creación de un objeto en JavaScript <br />y uso de un método:<br /><br />
+    <script type="text/JavaScript">
+	        empleado1 = new empleado('1980',23,6);
+	        empleado1.sueldo_mensual();
+	    </script>
+</body>
+
+</html>
