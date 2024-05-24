@@ -11,65 +11,74 @@ miBoton.addEventListener("click", (evento) => {
 })
 
 function validar() {
-    var nombre = document.getElementById("nombre").value;
-    var apellido = document.getElementById("apellido").value;
-    var telefono = document.getElementById("telefono").value;
-    var email = document.getElementById("email").value;
+    var nombre = document.getElementById("nombre");
+    var apellido = document.getElementById("apellido");
+    var telefono = document.getElementById("telefono");
+    var email = document.getElementById("email");
     var privacidad = document.getElementById("privacidad");
 
-    let mensaje = "";
+
     let correcto = true;
 
-    if (nombre == null || nombre == "") {
-        mensaje = "El campo nombre está en blanco.\n";
+    if (nombre.value == null || nombre.value == "") {
+        setError(nombre, "El campo nombre está en blanco.\n");
         correcto = false;
     } else {
         let name_re = /^([A-Za-zÑñÁáÉéÍíÓóÚú]{2,15})$/;
-        if (!name_re.exec(nombre)) {
-            mensaje += "El nombre solo puede estar compuesto de letras.\n";
+        if (!name_re.exec(nombre.value)) {
+            setError(nombre, "El nombre solo puede estar compuesto de letras.\n");
             correcto = false;
+        } else {
+            setSuccess(nombre);
         }
     }
 
 
-    /********  DIRECCIÓN  ***************/
 
-    if (apellido == null || apellido == "") {
-        mensaje += "El campo apellido está en blanco.\n";
+    /********  APELLIDO  ***************/
+
+    if (apellido.value == null || apellido.value == "") {
+        setError(apellido, "El campo apellido está en blanco.\n");
         correcto = false;
     } else {
         let ape_re = /^[A-Za-zÑñÁáÉéÍíÓóÚú]{2,40}$/;
-        if (!ape_re.exec(apellido)) {
-            mensaje += "El apellido solo puede estar compuesto de letras.\n";
+        if (!ape_re.exec(apellido.value)) {
+            setError(apellido, "El apellido solo puede estar compuesto de letras.\n");
             correcto = false;
+        } else {
+            setSuccess(apellido);
         }
     }
 
 
     /********  TELEFONO  ***************/
 
-    if (telefono == null || telefono == "") {
-        mensaje += "El campo telefono está en blanco.\n";
+    if (telefono.value == null || telefono.value == "") {
+        setError(telefono, "El campo telefono está en blanco.\n");
         correcto = false;
     } else {
         let tel_re = /^[\d]{9}$/;
-        if (!tel_re.exec(telefono)) {
-            mensaje += "Introduce número de 9 dígitos.\n";
+        if (!tel_re.exec(telefono.value)) {
+            setError(telefono, "Introduce número de 9 dígitos.\n");
             correcto = false;
+        } else {
+            setSuccess(telefono);
         }
     }
 
 
     /********  EMAIL  ***************/
 
-    if (email == null || email == "") {
-        mensaje += "El campo email está en blanco.\n";
+    if (email.value == null || email.value == "") {
+        setError(email, "El campo email está en blanco.\n");
         correcto = false;
     } else {
         let ema_re = /^([a-z0-9_.-]+)@([da-z.-]+).([a-z.]{2,6})$/;
-        if (!ema_re.exec(email)) {
-            mensaje += "Cumpla con un formato valido.\n";
+        if (!ema_re.exec(email.value)) {
+            setError(email, "Cumpla con un formato valido.\n");
             correcto = false;
+        } else {
+            setSuccess(email);
         }
     }
 
@@ -77,19 +86,30 @@ function validar() {
     /*********** PRIVACIDA ***************/
 
     if (!privacidad.checked) {
-        mensaje += "Tiene que aceptar las condiciones de privacidad.\n";
+        setError(privacidad, "Tiene que aceptar las condiciones de privacidad.\n");
         correcto = false;
+    } else {
+        setSuccess(privacidad);
     }
 
     if (correcto == true) {
         return true;
     } else {
-        alert(mensaje);
         return false;
     }
+}
 
+function setError(input, mensaje) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector("small");
+    formControl.className = "form-control error";
+    small.innerText = mensaje;
+}
 
-};
+function setSuccess(input) {
+    const formControl = input.parentElement;
+    formControl.className = "form-control success";
+}
 
 let precioTotal = 0;
 let productoSeleccionado = '';

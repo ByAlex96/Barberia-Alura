@@ -36,30 +36,36 @@
     <main class="main-contacto">
 
       <form id="form" name="form" method="post" action="procesar.php">
-        <fieldset class="formularioF">
+        <fieldset class="form-control" id="formularioF">
           <legend>Datos Personales</legend>
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" class="input-padron" placeholder="Escriba aquí su nombre">
-
-          <label for="apellido">Apellidos</label>
-          <input type="text" id="apellido" name="apellido" class="input-padron" placeholder="Escriba aquí su Apellido">
-
-          <label for="telefono">Telefono de contacto</label>
-          <input type="tel" id="telefono" name="telefono" class="input-padron"
-            placeholder="Escribe aquí tu telefono de contacto">
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" class="input-padron"
-            placeholder="Escribe aquí tu dirección de correo electronico">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="input-padron" placeholder="Escriba aquí su nombre">
+            <small>Error mensaje</small><br>
+          </div>
+          <div>
+            <label for="apellido">Apellidos</label>
+            <input type="text" id="apellido" name="apellido" class="input-padron"
+              placeholder="Escriba aquí su Apellido">
+            <small>Error mensaje</small><br>
+          </div>
+          <div>
+            <label for="telefono">Telefono de contacto</label>
+            <input type="tel" id="telefono" name="telefono" class="input-padron"
+              placeholder="Escribe aquí tu telefono de contacto">
+            <small>Error mensaje</small><br>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="input-padron"
+              placeholder="Escribe aquí tu dirección de correo electronico">
+            <small>Error mensaje</small>
+          </div>
         </fieldset>
 
 
 
-
-
-
-
-        <fieldset class="formularioF">
+        <fieldset class="form-control" id="formularioF">
           <legend>Presupuesto</legend>
           <div>
             <label>Elije un producto</label>
@@ -105,13 +111,7 @@
 
 
 
-
-
-
-
-
-
-        <fieldset class="formularioF">
+        <fieldset class="form-control" id="formularioF">
           <legend>Aceptación condiciones y envio de presupuesto </legend>
           <fieldset>
             <legend>¿Cómo le gustaría que lo contactemos?</legend>
@@ -142,6 +142,7 @@
             <div><input type="checkbox" id="privacidad" name="privacidad">
               <label for="privacidad"> He leído y acepto la
                 <u>Politica de privacidad</u> </label>
+              <small>Error mensaje</small>
             </div>
           </div>
           <!-- Agregamos el boton de enviar  -->
