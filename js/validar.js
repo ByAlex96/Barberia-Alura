@@ -99,6 +99,8 @@ function validar() {
     }
 }
 
+/************** CONTACTO **************/
+
 function setError(input, mensaje) {
     const formControl = input.parentElement;
     const small = formControl.querySelector("small");
@@ -189,3 +191,6 @@ function getPrecioProducto(nameProducto) {
     if (nameProducto === 'skin') precio = 30;
     return precio;
 }
+
+/************** PRODUCTO **************/
+

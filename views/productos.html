@@ -74,52 +74,131 @@
     <div class="img"></div>
   </div>
 
+  <section>
+    <div class="contenido">
+      <div class="images">
+        <img class="galeria" src="../imagenes/barba1.jpg">
+        <img class="galeria" src="../imagenes/barba2.jpg">
+        <img class="galeria" src="../imagenes/extras1.jpg">
+        <img class="galeria" src="../imagenes/extras2.jpg">
+        <img class="galeria" src="../imagenes/masaje1.jpg">
+        <img class="galeria" src="../imagenes/masaje2.jpg">
+      </div>
+      <div class="sliders left">
+        <span class="fa-sharp fa-solid fa-angle-left"></span>
+      </div>
+      <div class="sliders right">
+        <span class="fa-sharp fa-solid fa-angle-right"></span>
+      </div>
+      <div class="btm-slides">
+        <span class="btn" id="btn-1"> </span>
+        <span class="btn" id="btn-2"> </span>
+        <span class="btn" id="btn-3"> </span>
+        <span class="btn" id="btn-4"> </span>
+        <span class="btn" id="btn-5"> </span>
+        <span class="btn" id="btn-6> </span>
+      </div>
+    </div>
+  </section>
+  
+
 </main>
 <!-- El pie de página -->
-<footer class="footer" id="contact">
-  <div class="box-container">
-    <div class="content">
-      <a href="#"><img src="../imagenes/logo.png" alt="Logo" class="logo" width="220" height="280"></a>
-      <h1 class="logoName">ByAlex BarberShop</h1>
-    </div>
-    <div class="box">
-      <h3>Quick link</h3>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Product</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Blogs</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Review</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Contact</a>
-    </div>
-    <div class="box">
-      <h3>Extra link</h3>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Product</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Blogs</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Review</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Contact</a>
-    </div>
-    <div class="box">
-      <h3>Contact Info</h3>
-      <a href="#"> <i class="fas fa-phone"></i>+34 641909677</a>
-      <a href="#">
-        <i class="fas fa-envelope"></i>ByAlex@gmail.com</a>
-      <a href="https://maps.app.goo.gl/Zzqcr2AAdP2UDKh66">
-        <i class="fa-regular fa-map"></i>Ubicación:
-        Calle de Alonso Cano, 44, 46, 28003 Madrid</a>
+<footer class=" footer" id="contact">
+          <div class="box-container">
+            <div class="content">
+              <a href="#"><img src="../imagenes/logo.png" alt="Logo" class="logo" width="220" height="280"></a>
+              <h1 class="logoName">ByAlex BarberShop</h1>
+            </div>
+            <div class="box">
+              <h3>Quick link</h3>
+              <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+              <a href="#"> <i class="fas fa-arrow-right"></i>Product</a>
+              <a href="#"> <i class="fas fa-arrow-right"></i>Blogs</a>
+              <a href="#"> <i class="fas fa-arrow-right"></i>Review</a>
+              <a href="#"> <i class="fas fa-arrow-right"></i>Contact</a>
+            </div>
+            <div class="box">
+              <h3>Extra link</h3>
+              <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+              <a href="#"> <i class="fas fa-arrow-right"></i>Product</a>
+              <a href="#"> <i class="fas fa-arrow-right"></i>Blogs</a>
+              <a href="#"> <i class="fas fa-arrow-right"></i>Review</a>
+              <a href="#"> <i class="fas fa-arrow-right"></i>Contact</a>
+            </div>
+            <div class="box">
+              <h3>Contact Info</h3>
+              <a href="#"> <i class="fas fa-phone"></i>+34 641909677</a>
+              <a href="#">
+                <i class="fas fa-envelope"></i>ByAlex@gmail.com</a>
+              <a href="https://maps.app.goo.gl/Zzqcr2AAdP2UDKh66">
+                <i class="fa-regular fa-map"></i>Ubicación:
+                Calle de Alonso Cano, 44, 46, 28003 Madrid</a>
 
-    </div>
-  </div>
-  <div class="share">
-    <a href="https://www.facebook.com/Barberiadeivan" class="fab fa-facebook"></a>
-    <a href="https://twitter.com/barberiamaso" class="fab fa-twitter"></a>
-    <a href="https://www.instagram.com/barberiadeivan/" class="fab fa-instagram"></a>
-    <a href="https://www.linkedin.com/company/barberia/" class="fab fa-linkedin"></a>
-    <a href="https://www.pinterest.es/negrabarberia/" class="fab fa-pinterest"></a>
-  </div>
-  <div class="credit">
-    © Created by <span>Mr. ByAlex Designer</span> |Todos los derechos reservados!
-  </div>
-</footer>
-</body>
+            </div>
+          </div>
+          <div class="share">
+            <a href="https://www.facebook.com/Barberiadeivan" class="fab fa-facebook"></a>
+            <a href="https://twitter.com/barberiamaso" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/barberiadeivan/" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/company/barberia/" class="fab fa-linkedin"></a>
+            <a href="https://www.pinterest.es/negrabarberia/" class="fab fa-pinterest"></a>
+          </div>
+          <div class="credit">
+            © Created by <span>Mr. ByAlex Designer</span> |Todos los derechos reservados!
+          </div>
+          </footer>
+
+          </body>
+
+          <script>
+            var indexValue = 1;
+            showImg(indexValue);
+
+            const izq = document.querySelector(".left");
+            const dcha = document.querySelector(".right");
+
+            izq.addEventListener("click", () => {
+              showImg(indexValue += -1)
+
+            })
+
+            dcha.addEventListener("click", () => {
+              showImg(indexValue += 1)
+
+            })
+
+            let array = document.querySelectorAll(".btn");
+
+            array.forEach((item, index) => {
+              item.addEventListener("click", (e) => {
+                /*console.log(e.target.id.substr(-1));*/
+                showImg(indexValue = e.target.id.substr(-1))
+
+              })
+
+            })
+
+            function showImg(foto) {
+              var i;
+              const galeria = document.querySelectorAll(".galeria");
+              const slider = document.querySelectorAll(".btm-slides span");
+
+              if (foto > galeria.length) {
+                indexValue = 1;
+              }
+              if (foto < 1) {
+                indexValue = galeria.length;
+              }
+              for (i = 0; i < galeria.length; i++) {
+                galeria[i].style.display = "none";
+              }
+              for (i = 0; i < slider.length; i++) {
+                slider[i].style.background = "rgba(255,255,255,0.1)";
+              }
+              galeria[indexValue - 1].style.display = "block";
+              slider[indexValue - 1].style.background = "white";
+            }
+          </script>
 
 </html>

@@ -210,6 +210,17 @@ nav a:hover {
     margin: 1em auto;
 }
 
+
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 100vh;
+    flex-direction: column;
+    padding: 0 0 30px 0;
+}
+
 /*Iniciamos con la web productos.html*/
 /*Utilizamos la sentencia Flex para dar forma a las cajas de los productos*/
 .productos {
@@ -266,6 +277,7 @@ nav a:hover {
 }
 
 
+
 /*Inicia la Galería con GRID!*/
 
 .container {
@@ -276,6 +288,7 @@ nav a:hover {
     gap: 4px;
     padding: 0px 50px;
     margin: 2rem;
+    position: ;
 }
 
 .container div {
@@ -325,6 +338,67 @@ nav a:hover {
     background-position: center;
     object-fit: cover;
 }
+
+
+.contenido {
+    height: 400px;
+    width: 750px;
+    position: relative;
+}
+
+.contenido .images {
+    height: 100%;
+    width: 100%;
+}
+
+.contenido .images img {
+    height: 100%;
+    width: 100%;
+}
+
+.sliders {
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    cursor: pointer;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-50%);
+}
+
+.sliders:hover {
+    background: rgba(255, 255, 255, 0.3);
+
+}
+
+.right {
+    right: 0;
+}
+
+.sliders span {
+    color: white;
+    font-size: 35px;
+    line-height: 45px;
+}
+
+.btm-slides {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+}
+
+.btm-slides span {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+
 
 /*Comenzamos a dar estilos la web presupuesto.html*/
 /*En primer lugar ulizamos el linear-gradient nuevamente para dar un mejor aspecto al background*/
