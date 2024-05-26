@@ -136,14 +136,7 @@ nav a:hover {
 }
 
 
-/* Contenido principal responsive */
 .diferenciales {
-    padding: 2em 10px;
-    width: 100%;
-}
-
-.diferenciales {
-    grid-area: "my-section";
     width: 100%;
     height: auto;
     padding: 3em 0;
@@ -216,7 +209,7 @@ main section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-width: 100vh;
+    min-width: 100%;
     flex-direction: column;
     padding: 0 0 30px 0;
 }
@@ -803,6 +796,16 @@ th {
         width: 80%;
     }
 
+    main section {
+        width: 100%;
+        height: auto;
+    }
+
+    .contenido {
+        width: 100%;
+        height: auto;
+    }
+
     .productos {
         display: flex;
         flex-flow: column wrap;
@@ -832,7 +835,12 @@ th {
         margin: 0.5rem 0;
     }
 
-    .formulario {
+
+    #formularioF {
+        padding: 10px;
+        border: solid 1px black;
+        margin: 15px;
+        border-radius: 15px;
         width: auto;
     }
 
