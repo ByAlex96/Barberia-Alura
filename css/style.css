@@ -835,6 +835,21 @@ th {
         margin: 0.5rem 0;
     }
 
+    .contenido {
+        height: 200px;
+        width: 350px;
+        position: relative;
+    }
+
+    .contenido .images {
+        height: 100%;
+        width: 100%;
+    }
+
+    .contenido .images img {
+        height: 100%;
+        width: 100%;
+    }
 
     #formularioF {
         padding: 10px;
