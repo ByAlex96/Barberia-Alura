@@ -28,7 +28,7 @@ if (completo) {
     })
 }
 function showImg(foto) {
-    setTimeout(showImg, 2500);
+
 
     var i;
     const galeria = document.querySelectorAll(".galeria");
@@ -48,8 +48,7 @@ function showImg(foto) {
     }
     galeria[indexValue - 1].style.display = "block";
     slider[indexValue - 1].style.background = "white";
-    indexValue++;
-    if (indexValue > 6) { indexValue = 1 }
+
 }
 
 function crear() {
