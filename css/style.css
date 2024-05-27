@@ -657,7 +657,7 @@ th {
 
 .mapa input {
     text-align: center;
-    width: 25%;
+    width: 30%;
 }
 
 .mapa button {
@@ -883,4 +883,11 @@ th {
     #enviar {
         width: 80%;
     }
-}
+
+    .mapa button {
+        width: 25%;
+    }
+
+    .mapa p {
+        margin: 5% 5%;
+    }
