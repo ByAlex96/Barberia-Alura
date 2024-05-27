@@ -820,10 +820,6 @@ th {
         height: auto;
     }
 
-    .contenido {
-        width: 100%;
-        height: auto;
-    }
 
     .productos {
         display: flex;
@@ -856,7 +852,7 @@ th {
 
     .contenido {
         height: 250px;
-        width: 400px;
+        width: 95%;
         position: relative;
     }
 
