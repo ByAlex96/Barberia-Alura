@@ -192,5 +192,3 @@ function getPrecioProducto(nameProducto) {
     return precio;
 }
 
-/************** PRODUCTO **************/
-
