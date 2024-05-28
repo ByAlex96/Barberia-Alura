@@ -86,7 +86,7 @@ function validar() {
     /*********** PRIVACIDA ***************/
 
     if (!privacidad.checked) {
-        setError(privacidad, "Tiene que aceptar las condiciones de privacidad.\n");
+        setError(privacidad, "Acepte las condiciones de privacidad.\n");
         correcto = false;
     } else {
         setSuccess(privacidad);

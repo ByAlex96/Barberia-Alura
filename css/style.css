@@ -471,9 +471,26 @@ nav a:hover {
 
 }
 
+.input-text {
+    display: inline;
+    width: 30%;
+}
+
 .formulario .main-contacto form input {
     size: 80%;
 }
+
+.titulo-form {
+    font-size: 2em;
+    clear: left;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.plazo-precio {
+    display: inline;
+}
+
 
 small {
     background-color: #e74d3c;
@@ -504,6 +521,8 @@ form {
 }
 
 #formularioF {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     border: solid 2px black;
     margin: 30px;
@@ -544,7 +563,8 @@ form legend {
 }
 
 /*Agregamos color , tamaño y estilos al boton de enviar el formulario*/
-#enviar {
+#enviar,
+#borrar {
     width: 40%;
     margin: 30px 20px;
     padding: 15px 0;
@@ -558,7 +578,8 @@ form legend {
     cursor: pointer;
 }
 
-#enviar:hover {
+#enviar:hover,
+#borrar:hover {
     background: darkorange;
     transform: scale(1.2);
 }
@@ -583,8 +604,10 @@ form legend {
 }
 
 /*Le damos estilo a la tabla con los horarios*/
-table {
-    margin: 40px 40px 0px 40px;
+.table {
+    max-width: 80%;
+    width: 50%;
+    margin: 40px 40px 0px 25%;
 }
 
 thead {
@@ -799,6 +822,7 @@ th {
     .logo {
         height: 100px;
         width: 100px;
+        margin: 5%;
     }
 
     nav {
@@ -938,8 +962,15 @@ th {
         width: auto;
     }
 
-    #enviar {
+    #enviar,
+    #borrar {
         width: 80%;
+    }
+
+    .table {
+        max-width: 80%;
+        width: 100%;
+        margin: 40px 40px 0px 9%;
     }
 
     .mapa button {

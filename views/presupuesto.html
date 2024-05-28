@@ -36,8 +36,8 @@
     <main class="main-contacto">
 
       <form id="form" name="form" method="post" action="procesar.php">
-        <fieldset class="form-control" id="formularioF">
-          <legend>Datos Personales</legend>
+        <fieldset id="formularioF">
+          <legend class="titulo-form">Datos Personales</legend>
           <div>
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" class="input-padron" placeholder="Escriba aquí su nombre">
@@ -65,8 +65,8 @@
 
 
 
-        <fieldset class="form-control" id="formularioF">
-          <legend>Presupuesto</legend>
+        <fieldset id="formularioF">
+          <legend class="titulo-form">Presupuesto</legend>
           <div>
             <label>Elije un producto</label>
             <label for="categoria"></label>
@@ -79,31 +79,31 @@
             <br><br>
           </div>
 
+          <div class="plazo-precio">
+            <label for="plazo">Plazo de entrega (días)</label>
+            <input type="number" class="input-text" id="plazo" name="plazo" min="1" required>
+            <br><br>
 
-          <label for="plazo">Plazo de entrega (días)</label>
-          <input type="number" id="plazo" name="plazo" min="1" required>
-          <br><br>
+
+            <label>Opciones extra:</label><br>
+            <div>
+              <input type="checkbox" id="barba" name="extras" value="barba">
+              <label for="barba">Arreglo de barba - €5</label>
+            </div>
+            <div>
+              <input type="checkbox" id="shampoo" name="extras" value="shampoo">
+              <label for="shampoo">Lavado con shampoo especial - €3</label>
+            </div>
+            <div>
+              <input type="checkbox" id="masaje" name="extras" value="masaje">
+              <label for="masaje">Masaje capilar - €7</label>
+            </div>
+            <br>
 
 
-          <label>Opciones extra:</label><br>
-          <div>
-            <input type="checkbox" id="barba" name="extras" value="barba">
-            <label for="barba">Arreglo de barba - €5</label>
+            <label for="precioF">Presupuesto final</label>
+            <input type="text" class="input-text" id="precioF" name="precioF" readonly>
           </div>
-          <div>
-            <input type="checkbox" id="shampoo" name="extras" value="shampoo">
-            <label for="shampoo">Lavado con shampoo especial - €3</label>
-          </div>
-          <div>
-            <input type="checkbox" id="masaje" name="extras" value="masaje">
-            <label for="masaje">Masaje capilar - €7</label>
-          </div>
-          <br>
-
-
-          <label for="precioF">Presupuesto final</label>
-          <input type="text" id="precioF" name="precioF" readonly>
-
 
 
         </fieldset>
@@ -111,8 +111,8 @@
 
 
 
-        <fieldset class="form-control" id="formularioF">
-          <legend>Aceptación condiciones y envio de presupuesto </legend>
+        <fieldset id="formularioF">
+          <legend class="titulo-form">Aceptación condiciones y envio de presupuesto </legend>
           <fieldset>
             <legend>¿Cómo le gustaría que lo contactemos?</legend>
 
@@ -123,7 +123,6 @@
 
             <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp"
                 checked>Whatsapp</label>
-
           </fieldset>
 
           <fieldset>
@@ -141,7 +140,7 @@
             Barbería ByAlex?
             <div><input type="checkbox" id="privacidad" name="privacidad">
               <label for="privacidad"> He leído y acepto la
-                <u>Politica de privacidad</u> </label>
+                <u>Politica de privacidad</u> </label><br><br>
               <small>Error mensaje</small>
             </div>
           </div>
@@ -150,30 +149,30 @@
             <input type="submit" value="Enviar" id="enviar">
             <input type="reset" value="Borrar" id="borrar">
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Día</th>
-                <th>Horario</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Lunes</td>
-                <td>08h ~ 20h</td>
-              </tr>
-              <tr>
-                <td>Miércoles</td>
-                <td>08h ~ 20h</td>
-              </tr>
-              <tr>
-                <td>Viernes</td>
-                <td>08h ~ 20h</td>
-              </tr>
-        </fieldset>
-        </tbody>
-        </table>
-      </form>
+          <div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Día</th>
+                  <th>Horario</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lunes</td>
+                  <td>08h ~ 20h</td>
+                </tr>
+                <tr>
+                  <td>Miércoles</td>
+                  <td>08h ~ 20h</td>
+                </tr>
+                <tr>
+                  <td>Viernes</td>
+                  <td>08h ~ 20h</td>
+                </tr>
+          </div>
+          </tbody>
+          </table>
     </main>
   </div>
   <!-- El pie de pagina -->
