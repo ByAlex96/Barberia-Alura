@@ -135,6 +135,8 @@ nav a:hover {
 }
 
 .main-index {
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(#FEFEFE, #181616);
 }
 
@@ -151,6 +153,7 @@ nav a:hover {
 }
 
 .lista-diferenciales {
+    margin-left: 15%;
     width: 100%;
     display: inline-block;
     vertical-align: top;
@@ -834,7 +837,7 @@ th {
 
     /* Lista de diferenciales en dispositivos pequeños */
     .lista-diferenciales {
-        width: 100%;
+        width: 80%;
     }
 
     /* Imágenes diferenciales en dispositivos pequeños */
@@ -842,6 +845,7 @@ th {
         display: flex;
         flex-direction: column;
         align-items: center;
+        align-content: center;
         margin: 50px 0;
         gap: 10px;
     }
