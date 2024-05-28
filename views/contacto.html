@@ -4,39 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-    <title>Contacto - Barbería ByAlex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería ByAlex</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <!-- link iconos CSS-->
+    <!-- Link iconos CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        /* Estilos adicionales para el mapa y formulario */
-    </style>
+    <!-- Fuente de texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!-- Link iconos CSS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0YElSWC2pBGqdmXT3AnEoKrOxEy3ekdQ&callback=iniciarMap"></script>
-
-    <script src="../js/contacto.js"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0YElSWC2pBGqdmXT3AnEoKrOxEy3ekdQ&callback=iniciarMap">
+        </script>
 </head>
 
 <body>
-    <!-- Iniciamos con la barra de navegación-->
+    <!-- Iniciamos el encabezado -->
     <header>
         <div class="caja">
-            <a href="#"><img src="../imagenes/logo.png" width="150" height="150" alt="Logo de la Barbería"
-                    class="logo"></a>
+            <spam href="#"><img src="../imagenes/logo.png" width="150" height="150" alt="Logo de la Barbería"
+                    class="logo">
+            </spam>
             <nav>
+                <!-- Agregamos la barra de navegación -->
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="presupuesto.html">Contacto</a></li>
-                    <li><a id="selected" href="contacto.html">Ubicación</a></li>
+                    <li><a href="../views/productos.html">Productos</a></li>
+                    <li><a href="../views/presupuesto.html">Contacto</a></li>
+                    <li><a id="selected" href="#">Ubicación</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Agregamos el mapa de nuestra ubicación-->
+    <main>
+        <!-- Agregamos el mapa de nuestra ubicación-->
         <section class="mapa">
             <h3 class="titulo-principal">Nuestra Ubicación</h3>
             <p>Nuestro establecimiento está ubicado en el corazón de la ciudad</p>
@@ -45,6 +53,7 @@
             <button id="routeBtn">Calcular Ruta</button>
             <div id="map" class="frame"></div>
         </section>
+    </main>
 
     <!-- Implementamos el pie de página -->
     <footer class="footer" id="contact">
@@ -89,6 +98,7 @@
             © Created by <span>Mr. ByAlex Designer</span> | Todos los derechos reservados!
         </div>
     </footer>
+    <script src="../js/contacto.js"></script>
 </body>
 
 </html>

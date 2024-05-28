@@ -96,6 +96,20 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.checkbtn {
+    font-size: 30px;
+    color: #FFF;
+    float: right;
+    line-height: 80px;
+    margin: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
 /* Nos permite dejar seleccionado la web actual que estamos visualizando en la barra de menú*/
 #selected {
     color: white;
@@ -671,14 +685,30 @@ th {
     grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
     /*repite el cuadro de 10px como mínimo y máximo 1 fracción*/
     gap: 0.5rem;
-    padding: 1rem 0.5rem;
 }
 
 /*utilizamos flex para darle la orientación de columna a los elementos*/
 .footer .box-container .content {
     display: flex;
+    flex-direction: column-reverse;
+    margin-left: 20%;
+    width: 60%;
+    height: 60%;
+
+}
+
+.content a {
+    display: flex;
     flex-direction: column;
-    padding: 2rem 0;
+    align-items: center;
+    margin: 0 0 5%;
+    width: 50%;
+    height: 50%;
+}
+
+.content a img {
+    width: 120%;
+    height: 120%;
 }
 
 .footer .box {
@@ -689,9 +719,13 @@ th {
 
 .footer .box-container .content h1 {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    font-size: 1rem;
+    align-content: center;
+    font-weight: bold;
+    font-size: 1.7rem;
     color: var(--black);
+    margin-bottom: 25%;
 }
 
 
@@ -721,8 +755,6 @@ th {
 }
 
 .footer .share {
-    margin: 2rem 0;
-    padding: 1rem 0;
     text-align: center;
 }
 
@@ -787,7 +819,7 @@ th {
 .frame {
     margin: 2rem 2rem;
     width: 90%;
-    height: 500px;
+    height: 300px;
     border: 0;
 }
 
@@ -805,6 +837,10 @@ th {
 @media screen and (max-width: 480px) {
     * {
         margin: 0;
+    }
+
+    .banner {
+        height: 90%;
     }
 
     html {
@@ -840,18 +876,19 @@ th {
         align-items: flex-start;
         padding: 10px;
         width: 100%;
-        height: 50px;
+        height: 60px;
     }
-
-
-  
 
     .logo {
         max-width: 60px;
     }
 
     nav {
-        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 100%;
+        top: -50px;
     }
 
     nav ul li a {
@@ -866,10 +903,9 @@ th {
     }
 
     nav ul {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
+
         width: 100%;
+        margin: 0px;
     }
 
     nav ul li {
@@ -883,234 +919,294 @@ th {
         font-size: 12px;
         padding: 6px 8px;
     }
-}
 
-header div {
-    top: 100;
-}
 
-.caja {
-    min-width: 50%;
-    min-height: 50%;
+    header div {
+        top: 100;
+    }
 
-}
+    .caja {
+        min-width: 50%;
+        min-height: 50%;
 
-  .caja spam img {
+    }
+
+    .caja spam img {
         display: block;
-    cursor: pointer;
-    height: 90%;
-    width: 8%;
-    margin: .5rem ;
+        cursor: pointer;
+        height: 90%;
+        width: 8%;
+        margin: .5rem;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    li a:hover,
+    li a.active {
+        background: none;
+        color: red;
+    }
+
+    #check:checked~ul {
+        left: -130px;
     }
 
 
-.principal {
-    width: 100%;
-    height: auto;
-}
-
-/* Contenido principal responsive */
-.diferenciales {
-    padding: 2em 0;
-    width: 100%;
-}
-
-/* Lista de diferenciales en dispositivos pequeños */
-.lista-diferenciales {
-    width: 80%;
-}
-
-/* Imágenes diferenciales en dispositivos pequeños */
-.caja-diferenciales {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    margin: 50px 0;
-    gap: 10px;
-}
-
-.imagen-diferenciales {
-    margin: 0 0 20px;
-}
-
-.main {
-    width: 100%;
-    height: auto;
-}
-
-/* Video responsive */
-.video {
-    width: 100%;
-    margin: 1em 0;
-    display: flex;
-    justify-content: center;
-}
-
-.video .frame {
-    width: 300px;
-    height: 200px;
-}
-
-
-.mapa .frame {
-    margin: 1rem 2rem;
-    width: 80%;
-}
-
-.sectionGrid {
-    width: 100%;
-    height: auto;
-}
-
-
-.productos {
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.productos li {
-    width: auto;
-    vertical-align: top;
-    margin: 0 1.5%;
-    padding: 30px 0px;
-    box-sizing: border-box;
-    border: 2px solid #000000;
-    border-radius: 10px;
-}
+    .principal {
+        width: 100%;
+        height: auto;
+    }
 
 
 
-.container {
-    width: 75wh;
-    margin: 60px auto;
-    display: grid;
-    grid-template-columns:
-        repeat(4, 1fr);
-    grid-auto-rows: 140px;
-    gap: 2px;
-    padding: 0 0.5rem;
-    margin: 0.5rem 0;
-}
+    /* Contenido principal responsive */
+    .diferenciales {
+        padding: 2em 0;
+        width: 100%;
+    }
 
-.contenido {
-    height: 250px;
-    width: 95%;
-    position: relative;
-}
+    /* Lista de diferenciales en dispositivos pequeños */
+    .lista-diferenciales {
+        width: 80%;
+    }
 
-.contenido .images {
-    height: 100%;
-    width: 100%;
-    margin: 20px 0;
-}
+    /* Imágenes diferenciales en dispositivos pequeños */
+    .caja-diferenciales {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        margin: 50px 0;
+        gap: 10px;
+    }
 
-.contenido .images img {
-    height: 100%;
-    width: 100%;
-    margin: 20px 0;
-}
+    .imagen-diferenciales {
+        margin: 0 0 20px;
+    }
 
-form div,
-form legend {
-    display: block;
-    width: 100%;
-}
+    .main {
+        width: 100%;
+        height: auto;
+    }
 
-.label-datos {
-    display: block;
-}
+    /* Video responsive */
+    .video {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 1em 0;
 
-.input-padron {
-    display: block;
-    width: 80%;
-    padding: .8rem;
-    margin: .8rem;
-}
+    }
 
-small {
-    display: flex;
-    background-color: #e74d3c;
-    border-radius: .5rem;
-    padding: .5rem;
-    color: #FFF;
-    bottom: 0px;
-    left: 0px;
-    visibility: hidden;
-}
+    .video .frame {
+        width: 300px;
+        height: 200px;
+    }
 
-.caja-enviar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.label-privacidad {
-    margin: 20px;
-}
+    .mapa .frame {
+        margin: 1rem 2rem;
+        width: 80%;
+    }
 
-.label-privacidad u {
-    color: blue;
-    margin: 20px;
-}
+    .sectionGrid {
+        width: 100%;
+        height: auto;
+    }
 
-.formularioF {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border: solid 1px black;
-    margin: 15px;
-    border-radius: 15px;
-    width: auto;
-}
 
-#enviar,
-#borrar {
-    width: 80%;
-}
+    .productos {
+        display: flex;
+        flex-flow: column wrap;
+    }
 
-.table {
-    max-width: 80%;
-    width: 100%;
-    margin: 40px 40px 0px 9%;
-}
+    .productos li {
+        width: auto;
+        vertical-align: top;
+        margin: 0 1.5%;
+        padding: 30px 0px;
+        box-sizing: border-box;
+        border: 2px solid #000000;
+        border-radius: 10px;
+    }
 
-.mapa button {
-    width: 25%;
-}
 
-.mapa p {
-    margin: 5% 5%;
-}
 
-#noticias {
-    width: 90%;
-    border-radius: 5px;
-}
+    .container {
+        width: 75wh;
+        margin: 60px auto;
+        display: grid;
+        grid-template-columns:
+            repeat(4, 1fr);
+        grid-auto-rows: 140px;
+        gap: 2px;
+        padding: 0 0.5rem;
+        margin: 0.5rem 0;
+    }
 
-.noticia {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 95%;
-    height: 95%;
-    margin-bottom: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
+    .contenido {
+        height: 250px;
+        width: 95%;
+        position: relative;
+    }
 
-.imagen-noticia {
-    width: 95%;
-    height: 95%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
+    .contenido .images {
+        height: 100%;
+        width: 100%;
+        margin: 20px 0;
+    }
 
-.imagen-noticia img {
-    width: 300px;
-    height: 450px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    padding-bottom: 10px;
-}
+    .contenido .images img {
+        height: 100%;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    form div,
+    form legend {
+        display: block;
+        width: 100%;
+    }
+
+    .label-datos {
+        display: block;
+    }
+
+    .input-padron {
+        display: block;
+        width: 80%;
+        padding: .8rem;
+        margin: .8rem;
+    }
+
+    small {
+        display: flex;
+        background-color: #e74d3c;
+        border-radius: .5rem;
+        padding: .5rem;
+        color: #FFF;
+        bottom: 0px;
+        left: 0px;
+        visibility: hidden;
+    }
+
+    .caja-enviar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .label-privacidad {
+        margin: 20px;
+    }
+
+    .label-privacidad u {
+        color: blue;
+        margin: 20px;
+    }
+
+    .formularioF {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: solid 1px black;
+        margin: 15px;
+        border-radius: 15px;
+        width: auto;
+    }
+
+    #enviar,
+    #borrar {
+        width: 80%;
+    }
+
+    .table {
+        max-width: 80%;
+        width: 100%;
+        margin: 40px 40px 0px 9%;
+    }
+
+    .mapa button {
+        width: 25%;
+    }
+
+    .mapa p {
+        margin: 5% 5%;
+    }
+
+    #noticias {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        width: 90%;
+        border-radius: 5px;
+    }
+
+    .noticia {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 95%;
+        height: 95%;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .imagen-noticia {
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: center;
+        align-items: center;
+        width: 95%;
+        height: 95%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .imagen-noticia img {
+        width: 300px;
+        height: 450px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding-bottom: 10px;
+    }
+
+    .content a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 5%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer .box-container .content h1 {
+        display: none;
+    }
+
 }
