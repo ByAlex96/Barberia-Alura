@@ -312,7 +312,7 @@ nav a:hover {
     height: 95%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    position: relative;
+    padding-bottom: 10px;
 }
 
 .contenido-noticia {
@@ -950,7 +950,6 @@ th {
     #noticias {
         width: 90%;
         border-radius: 5px;
-        position: relative;
     }
 
     .noticia {
@@ -969,5 +968,13 @@ th {
         height: 95%;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+    }
+
+    .imagen-noticia img {
+        width: 300px;
+        height: 450px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding-bottom: 10px;
     }
 }
