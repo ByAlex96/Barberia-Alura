@@ -22,33 +22,29 @@ body {
         "my-header"
         "my-main"
         "my-footer";
+    background-color: #BBBBBB;
     font-family: 'Montserrat', sans-serif !important;
     font-size: 16px;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
     margin: 0;
     width: 100%;
     height: auto;
+    padding-top: 150px;
+    /* Ajustamos el padding-top para que coincida con la altura del header */
 }
 
 header {
     position: fixed;
+    background-color: #BBBBBB;
     top: 0;
     width: 100%;
-    height: 50%;
-    background-color: #BBBBBB;
-    padding: 20px 0 0;
+    height: 150px;
+    /* Aseguramos que la altura del header sea la esperada */
     margin: 0;
     grid-area: my-header;
     z-index: 1000;
-    /* Para que esté por encima de otros elementos */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Opcional: Añadir una sombra para que destaque */
-}
-
-body {
-    padding-top: 170px;
-    /* Añade un padding-top equivalente a la altura del header más padding para evitar que el contenido lo cubra */
 }
 
 .caja {
@@ -57,7 +53,6 @@ body {
     margin: 0 auto;
     height: 150px;
 }
-
 
 .caja .selecter a.active {
     border-color: #088c19;
@@ -88,6 +83,9 @@ nav a {
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 1rem;
 }
 
 nav a:hover {
@@ -102,25 +100,35 @@ nav a:hover {
 }
 
 .main {
-    grid-area: "my-main";
+    grid-area: my-main;
     width: 100%;
     height: auto;
+    margin: 0;
+    /* Aseguramos que no haya márgenes adicionales */
 }
-
 
 /* CSS para nuestra pagina inicial*/
 
-.banner {
-    position: absolute;
+
+.banner img {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.principal {
     width: 100%;
     height: auto;
 }
 
-.principal {
-    padding: 3em 0;
-    width: 100%;
-    height: auto;
+
+
+.utensilios {
+    width: 120px;
+    float: left;
+    margin: 0 5% 20px 5%;
 }
+
 
 .titulo-principal {
     text-align: center;
@@ -131,7 +139,7 @@ nav a:hover {
 }
 
 .principal p {
-    margin: 0 0 1em;
+    margin: 0 5% 1rem 1rem;
 }
 
 .principal strong {
@@ -142,11 +150,7 @@ nav a:hover {
     font-style: italic;
 }
 
-.utensilios {
-    width: 120px;
-    float: left;
-    margin: 0 20px 20px 0;
-}
+
 
 .main-index {
     display: flex;
@@ -796,22 +800,13 @@ th {
 
 
 /*media queries for web responsive*/
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 820px) {
     * {
         margin: 0;
     }
 
     html {
         margin: 0;
-    }
-
-    nav a {
-        display: inline-block;
-        text-transform: uppercase;
-        color: #000000;
-        font-weight: bold;
-        font-size: 12px;
-        text-decoration: none;
     }
 
     /* Ajustes generales */
@@ -830,37 +825,52 @@ th {
         height: auto;
     }
 
+    body {
+        display: block;
+        padding-top: 15%;
+        /* Ajustar según la nueva altura del header */
+    }
+
     /* Haciendo el header responsive */
     header {
-        position: absolute;
-        padding: 5px 0;
+        display: grid;
+        grid-template-columns: 25% 75%;
+        align-content: center;
         height: 12%;
+        width: 100%;
+    }
+
+    header img {
+        padding: 0 0 20px;
+    }
+
+    .nav a {
+        display: inline-block;
+        text-transform: uppercase;
+        color: #000000;
+        font-weight: bold;
+        font-size: 12px;
+        text-decoration: none;
     }
 
     .caja {
         width: 100%;
         height: auto;
-        padding: 5px;
-        flex-direction: column;
-        align-items: center;
     }
 
-    .caja nav {
-        display: flex;
-        top: 0px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-        margin: 0;
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     nav ul li {
+        text-align: center;
         margin: 5px;
         font-size: 50%;
         font-weight: bold;
+        text-decoration: none;
+        color: black;
+        padding: 5px;
     }
 
     nav ul li a {
@@ -868,11 +878,13 @@ th {
         margin: .2rem;
     }
 
-    nav li {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: center;
-        transition: background-color 0.3s;
+    .caja a {
+        background-size: contain;
+    }
+
+    .caja a img {
+
+        display: none;
     }
 
     .logo {
@@ -882,9 +894,7 @@ th {
         /* Reduce el margen derecho */
     }
 
-    .caja a img {
-        display: none;
-    }
+
 
     .logo,
     nav ul {
@@ -896,10 +906,9 @@ th {
 
     }
 
-    body {
-        display: block;
-        padding-top: 15%;
-        /* Ajustar según la nueva altura del header */
+    .principal {
+        width: 100%;
+        height: auto;
     }
 
     /* Contenido principal responsive */

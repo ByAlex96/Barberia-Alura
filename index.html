@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barbería ByAlex</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
@@ -16,11 +15,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<!-- Iniciamos el encabezado -->
-<header>
-  <div class="caja">
-    <a href="#"><img src="imagenes/logo.png" width="150" height="150" alt="Logo de la Barbería" class="logo"></a>
-    <nav> <!-- Agregamos la barra de navegación -->
+<body>
+  <!-- Iniciamos el encabezado -->
+  <header>
+    <div class="caja">
+      <a href="#"><img src="imagenes/logo.png" width="150" height="150" alt="Logo de la Barbería" class="logo"></a>
+      <nav> <!-- Agregamos la barra de navegación -->
       <ul>
         <li><a id="selected" href="index.html">Home</a></li>
         <li><a href="views/productos.html">Productos</a></li>
@@ -28,125 +28,117 @@
         <li><a href="views/contacto.html">Ubicación</a></li>
       </ul>
     </nav>
-  </div>
-</header>
+    </div>
+    
+  </header>
 
-<!-- Iniciamos el cuerpo con una intro -->
+  <!-- Iniciamos el cuerpo con una intro -->
+  <main class="main-index">
+    <div class="banner"><img src="imagenes/banner.jpg" alt="imagen banner"></div>
 
-<!-- Insetamos nuestro banner -->
-<img class="banner" src="imagenes/banner.jpg" alt="imagen banner">
-<main class="main-index">
-  <section class="principal">
-    <h2 class="titulo-principal">Sobre la Barbería ByAlex</h2>
+    <section class="principal">
 
-    <img class="utensilios" src="imagenes/utensilios.jpg" width="120" height="120" alt="Utensilios de un barbero">
+      <h2 class="titulo-principal">Sobre la Barbería ByAlex</h2>
 
-    <p>
-      Ubicada en el corazón de la ciudad, la
-      <strong>Barbería ByAlex</strong> trae para el mercado lo que hay de
-      mejor para su cabello y barba. Fundada en 2020, la Barbería ByAlex ya
-      es destaque en la ciudad y conquista nuevos clientes diariamente.
-    </p>
+      <img class="utensilios" src="imagenes/utensilios.jpg" width="120" height="120" alt="Utensilios de un barbero">
 
-    <p id="mision">
-      <em>Nuestra misión es:
-        <strong>"Proporcionar autoestima y calidad de vida a nuestros
-          clientes"</strong>.</em>
-    </p>
+      <p>
+        Ubicada en el corazón de la ciudad, la <strong>Barbería ByAlex</strong> trae para el mercado lo que hay de mejor
+        para su cabello y barba. Fundada en 2020, la Barbería ByAlex ya es destaque en la ciudad y conquista nuevos
+        clientes diariamente.
+      </p>
 
-    <p>
-      Ofrecemos profesionales experimentados que están constantemente
-      observando los cambios y movimiento en el mundo de la moda, para así
-      ofrecer a nuestros clientes las últimas tendencias. El atendimiento
-      posee un padrón de excelencia y agilidad, garantizando calidad y
-      satisfacción de nuestros clientes.
-    </p>
-  </section>
-  <!-- Mencionamos nuestras carácterísticas diferenciales y mostramos algo del trabajo que se realiza-->
-  <section class="diferenciales">
-    <h3 class="titulo-principal">Diferenciales</h3>
+      <p id="mision">
+        <em>Nuestra misión es: <strong>"Proporcionar autoestima y calidad de vida a nuestros clientes"</strong>.</em>
+      </p>
 
-    <div class="contenido-diferenciales">
-      <ul class="lista-diferenciales">
-        <li class="items">Atención personalizada a los clientes</li>
-        <li class="items">Espacio diferenciado</li>
-        <li class="items">Localización</li>
-        <li class="items">Profesesionales calificados</li>
-        <li class="items">Puntualidad</li>
-        <li class="items">Limpieza</li>
-      </ul>
-      <div class="caja-diferenciales">
-        <img src="imagenes/diferenciales.jpeg" class="imagen-diferenciales" width="220" height="280"
-          alt="imagen diferencial 1">
-        <img src="imagenes/diferenciales2.jpg" class="imagen-diferenciales" width="220" height="280"
-          alt="imagen diferencial 2">
-        <img src="imagenes/diferenciales3.jpg" class="imagen-diferenciales" width="220" height="280"
-          alt="imagen diferencial 3">
-        <img src="imagenes/diferenciales4.jpg" class="imagen-diferenciales" width="220" height="280"
-          alt="imagen diferencial 4">
+      <p>
+        Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo
+        de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de
+        excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes.
+      </p>
+    </section>
+
+    <!-- Mencionamos nuestras carácterísticas diferenciales y mostramos algo del trabajo que se realiza-->
+    <section class="diferenciales">
+      <h3 class="titulo-principal">Diferenciales</h3>
+
+      <div class="contenido-diferenciales">
+        <ul class="lista-diferenciales">
+          <li class="items">Atención personalizada a los clientes</li>
+          <li class="items">Espacio diferenciado</li>
+          <li class="items">Localización</li>
+          <li class="items">Profesionales calificados</li>
+          <li class="items">Puntualidad</li>
+          <li class="items">Limpieza</li>
+        </ul>
+        <div class="caja-diferenciales">
+          <img src="imagenes/diferenciales.jpeg" class="imagen-diferenciales" width="220" height="280"
+            alt="imagen diferencial 1">
+          <img src="imagenes/diferenciales2.jpg" class="imagen-diferenciales" width="220" height="280"
+            alt="imagen diferencial 2">
+          <img src="imagenes/diferenciales3.jpg" class="imagen-diferenciales" width="220" height="280"
+            alt="imagen diferencial 3">
+          <img src="imagenes/diferenciales4.jpg" class="imagen-diferenciales" width="220" height="280"
+            alt="imagen diferencial 4">
+        </div>
+      </div>
+      <div class="video">
+        <iframe class="frame" width="560" height="315"
+          src="https://www.youtube.com/embed/wcVVXUV0YUY?si=Kp9q2LB6c4FinGbJ" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class="caja-noticias">
+      <h3 class="titulo-principal">Noticias</h3><br>
+      <div id="noticias"></div>
+    </section>
+  </main>
+
+  <!-- Iniciamos el footer -->
+  <footer class="footer" id="contact">
+    <div class="box-container">
+      <div class="content">
+        <a href="#"><img src="./imagenes/logo.png" alt="Logo" class="logo" width="220" height="280"></a>
+        <h1 class="logoName">ByAlex BarberShop</h1>
+      </div>
+      <div class="box">
+        <h3>Quick link</h3>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Product</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Blogs</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Review</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Contact</a>
+      </div>
+      <div class="box">
+        <h3>Extra link</h3>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Product</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Blogs</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Review</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Contact</a>
+      </div>
+      <div class="box">
+        <h3>Contact Info</h3>
+        <a href="#"> <i class="fas fa-phone"></i>+34 641909677</a>
+        <a href="#"> <i class="fas fa-envelope"></i>ByAlex@gmail.com</a>
+        <a href="https://maps.app.goo.gl/Zzqcr2AAdP2UDKh66">
+          <i class="fa-regular fa-map"></i>Ubicación: Calle de Alonso Cano, 44, 46, 28003 Madrid</a>
       </div>
     </div>
-    <div class="video">
-      <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY?si=Kp9q2LB6c4FinGbJ"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <div class="share">
+      <a href="https://www.facebook.com/Barberiadeivan" class="fab fa-facebook"></a>
+      <a href="https://twitter.com/barberiamaso" class="fab fa-twitter"></a>
+      <a href="https://www.instagram.com/barberiadeivan/" class="fab fa-instagram"></a>
+      <a href="https://www.linkedin.com/company/barberia/" class="fab fa-linkedin"></a>
+      <a href="https://www.pinterest.es/negrabarberia/" class="fab fa-pinterest"></a>
     </div>
-  </section>
-  <section class="caja-noticias">
-    <h3 class="titulo-principal">Noticias</h3><br>
-    <div id="noticias">
+    <div class="credit">
+      © Created by <span>Mr. ByAlex Designer</span> | Todos los derechos reservados!
     </div>
-  </section>
-</main>
-
-<!-- Iniciamos el footer -->
-
-<footer class="footer" id="contact">
-
-  <div class="box-container">
-    <div class="content">
-      <a href="#"><img src="./imagenes/logo.png" alt="Logo" class="logo" width="220" height="280"></a>
-      <h1 class="logoName">ByAlex BarberShop</h1>
-    </div>
-    <div class="box">
-      <h3>Quick link</h3>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Product</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Blogs</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Review</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Contact</a>
-    </div>
-    <div class="box">
-      <h3>Extra link</h3>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Product</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Blogs</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Review</a>
-      <a href="#"> <i class="fas fa-arrow-right"></i>Contact</a>
-    </div>
-    <div class="box">
-      <h3>Contact Info</h3>
-      <a href="#"> <i class="fas fa-phone"></i>+34 641909677</a>
-      <a href="#">
-        <i class="fas fa-envelope"></i>ByAlex@gmail.com</a>
-      <a href="https://maps.app.goo.gl/Zzqcr2AAdP2UDKh66">
-        <i class="fa-regular fa-map"></i>Ubicación:
-        Calle de Alonso Cano, 44, 46, 28003 Madrid</a>
-
-    </div>
-  </div>
-  <div class="share">
-    <a href="https://www.facebook.com/Barberiadeivan" class="fab fa-facebook"></a>
-    <a href="https://twitter.com/barberiamaso" class="fab fa-twitter"></a>
-    <a href="https://www.instagram.com/barberiadeivan/" class="fab fa-instagram"></a>
-    <a href="https://www.linkedin.com/company/barberia/" class="fab fa-linkedin"></a>
-    <a href="https://www.pinterest.es/negrabarberia/" class="fab fa-pinterest"></a>
-  </div>
-  <div class="credit">
-    © Created by <span>Mr. ByAlex Designer</span> |Todos los derechos reservados!
-  </div>
-</footer>
-<script src="../js/noticias.js"></script>
+  </footer>
+  <script src="../js/noticias.js"></script>
+</body>
 
 </html>
