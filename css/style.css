@@ -481,6 +481,7 @@ nav a:hover {
 }
 
 .titulo-form {
+
     font-size: 2em;
     clear: left;
     font-weight: bold;
@@ -520,7 +521,7 @@ form {
     flex-direction: column;
 }
 
-#formularioF {
+.formularioF {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -954,7 +955,7 @@ th {
         margin: 20px 0;
     }
 
-    #formularioF {
+    .formularioF {
         padding: 10px;
         border: solid 1px black;
         margin: 15px;
