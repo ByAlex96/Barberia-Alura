@@ -1,0 +1,17 @@
+[
+    {
+        "titulo": "Nuevo horario de atención",
+        "descripcion": "A partir del próximo lunes, la Barbería ByAlex tendrá un nuevo horario de atención para mejorar nuestro servicio.",
+        "imagen": "https://www.shutterstock.com/image-photo/young-man-barbershop-hair-care-600nw-626287178.jpg"
+    },
+    {
+        "titulo": "Descuento en cortes de cabello",
+        "descripcion": "Durante todo el mes de junio, ofrecemos un 20% de descuento en todos los cortes de cabello.",
+        "imagen": "https://scontent-mad1-1.xx.fbcdn.net/v/t1.6435-9/36188902_1646685045450361_6459492081445371904_n.png?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cWNwBDfZJPwQ7kNvgHoomuD&_nc_ht=scontent-mad1-1.xx&oh=00_AYByHafU1ebo2-orIG_n98-q0IfwOsGQFKq8jYSYHJUcNA&oe=667CB15B"
+        },
+    {
+        "titulo": "Nueva línea de productos",
+        "descripcion": "Estamos emocionados de anunciar nuestra nueva línea de productos para el cuidado del cabello, disponible desde la próxima semana.",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy4ag8e5LguZ74wu-P6CQbfYpvDjvIPLpOA_l7qHAa6w&s"
+    }
+]
