@@ -32,13 +32,23 @@ body {
 }
 
 header {
+    position: fixed;
+    top: 0;
     width: 100%;
     background-color: #BBBBBB;
     padding: 20px 0 0;
     margin: 0;
     grid-area: my-header;
+    z-index: 1000;
+    /* Para que esté por encima de otros elementos */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Opcional: Añadir una sombra para que destaque */
 }
 
+body {
+    padding-top: 170px;
+    /* Añade un padding-top equivalente a la altura del header más padding para evitar que el contenido lo cubra */
+}
 
 .caja {
     width: 90%;
@@ -47,15 +57,20 @@ header {
     height: 150px;
 }
 
+.caja a img {
+    top: 50px;
+}
+
 .caja .selecter a.active {
     border-color: #088c19;
 }
 
 .logo {
-    position: block;
+    display: block;
     cursor: pointer;
     height: 150px;
     width: 150px;
+    margin: .5rem .5rem .5rem;
 }
 
 nav {
@@ -154,7 +169,7 @@ nav a:hover {
 
 .lista-diferenciales {
     margin-left: 15%;
-    width: 100%;
+    width: 80%;
     display: inline-block;
     vertical-align: top;
 }
@@ -476,17 +491,13 @@ nav a:hover {
     width: 30%;
 }
 
-.formulario .main-contacto form input {
-    size: 80%;
-}
-
 .titulo-form {
-
     font-size: 2em;
     clear: left;
     font-weight: bold;
     margin: 2rem 0;
 }
+
 
 .plazo-precio {
     display: inline;
@@ -531,23 +542,35 @@ form {
     width: 800px;
 }
 
+
 /*damos tamaño a los cuadros*/
 
 form div,
 form legend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.div-extra {
     display: block;
     font-size: 16px;
     margin: 0 0 10px;
 }
 
-
+.label-datos {
+    min-width: 180px;
+    max-width: 180px;
+}
 
 .input-padron {
-    display: block;
-    margin: 0 0 20px;
-    padding: 10px 25px;
-    width: 70%;
+    margin: 10px;
+    width: 60%;
 }
+
+
 
 /* Le damos 20 px de espacio entre lo iconos para que no se vea muy junto*/
 #radio-whatsapp {
@@ -555,7 +578,7 @@ form legend {
 }
 
 .checkbox {
-    margin: 20px 0;
+    margin: 8px 0;
 }
 
 .checkbox u {
@@ -955,7 +978,52 @@ th {
         margin: 20px 0;
     }
 
+    form div,
+    form legend {
+        display: block;
+        width: 100%;
+    }
+
+    .label-datos {
+        display: block;
+    }
+
+    .input-padron {
+        display: block;
+        width: 80%;
+        padding: .8rem;
+        margin: .8rem;
+    }
+
+    small {
+        display: flex;
+        background-color: #e74d3c;
+        border-radius: .5rem;
+        padding: .5rem;
+        color: #FFF;
+        bottom: 0px;
+        left: 0px;
+        visibility: hidden;
+    }
+
+    .caja-enviar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .label-privacidad {
+        margin: 20px;
+    }
+
+    .label-privacidad u {
+        color: blue;
+        margin: 20px;
+    }
+
     .formularioF {
+        display: flex;
+        flex-direction: column;
         padding: 10px;
         border: solid 1px black;
         margin: 15px;

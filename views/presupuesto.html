@@ -5,16 +5,16 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - Barbería ByAlex</title>
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
-  <!-- csn icon link-->
+  <!-- CDN icon link-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
-  <!-- Iniciamos la barra de navegacion-->
+  <!-- Iniciamos la barra de navegación -->
   <header>
     <div class="caja">
       <a href="#">
@@ -32,61 +32,54 @@
   </header>
 
   <div class="formulario">
-    <!--Iniciamos con el formulario-->
+    <!-- Iniciamos con el formulario -->
     <main class="main-contacto">
-
       <form id="form" name="form" method="post" action="procesar.php">
         <fieldset class="formularioF">
           <legend class="titulo-form">Datos Personales</legend>
           <div>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" class="input-padron" placeholder="Escriba aquí su nombre">
-            <small>Error mensaje</small><br>
+            <label class="label-datos" for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="text" class="input-padron" placeholder="Escriba aquí su nombre">
+            <small>Error mensaje</small>
           </div>
           <div>
-            <label for="apellido">Apellidos</label>
+            <label class="label-datos" for="apellido">Apellidos</label>
             <input type="text" id="apellido" name="apellido" class="input-padron"
               placeholder="Escriba aquí su Apellido">
-            <small>Error mensaje</small><br>
+            <small>Error mensaje</small>
           </div>
           <div>
-            <label for="telefono">Telefono de contacto</label>
+            <label class="label-datos" for="telefono">Teléfono de contacto</label>
             <input type="tel" id="telefono" name="telefono" class="input-padron"
-              placeholder="Escribe aquí tu telefono de contacto">
-            <small>Error mensaje</small><br>
+              placeholder="Escriba aquí su teléfono de contacto">
+            <small>Error mensaje</small>
           </div>
           <div>
-            <label for="email">Email</label>
+            <label class="label-datos" for="email">Email</label>
             <input type="email" id="email" name="email" class="input-padron"
-              placeholder="Escribe aquí tu dirección de correo electronico">
+              placeholder="Escriba aquí su dirección de correo electrónico">
             <small>Error mensaje</small>
           </div>
         </fieldset>
 
-
-
         <fieldset class="formularioF">
           <legend class="titulo-form">Presupuesto</legend>
           <div>
-            <label>Elije un producto</label>
-            <label for="categoria"></label>
+            <label>Elija un producto</label>
             <select id="categoria" name="categoria" required>
               <option value="" disabled selected>Seleccione el tipo de corte</option>
               <option value="clasico">Clásico - €20</option>
               <option value="degrado">Degradado - €25</option>
               <option value="skin">Skin Fade - €30</option>
             </select>
-            <br><br>
           </div>
-
           <div class="plazo-precio">
             <label for="plazo">Plazo de entrega (días)</label>
             <input type="number" class="input-text" id="plazo" name="plazo" min="1" required>
-            <br><br>
-
-
-            <label>Opciones extra:</label><br>
-            <div>
+          </div>
+          <div class="div-extra">
+            <label>Opciones extra:</label>
+            <div >
               <input type="checkbox" id="barba" name="extras" value="barba">
               <label for="barba">Arreglo de barba - €5</label>
             </div>
@@ -98,35 +91,33 @@
               <input type="checkbox" id="masaje" name="extras" value="masaje">
               <label for="masaje">Masaje capilar - €7</label>
             </div>
-            <br>
-
-
+          </div>
+          <div>
             <label for="precioF">Presupuesto final</label>
             <input type="text" class="input-text" id="precioF" name="precioF" readonly>
           </div>
-
-
         </fieldset>
 
-
-
-
         <fieldset class="formularioF">
-          <legend class="titulo-form">Aceptación condiciones y envio de presupuesto </legend>
+          <legend class="titulo-form">Aceptación condiciones y envío de presupuesto</legend>
           <fieldset>
             <legend>¿Cómo le gustaría que lo contactemos?</legend>
-
-            <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
-
-            <label for="radio-telefono"><input type="radio" name="contacto" value="telefono"
-                id="radio-telefono">Teléfono</label>
-
-            <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp"
-                checked>Whatsapp</label>
+            <div>
+              <input type="radio" name="contacto" value="email" id="radio-email">
+              <label for="radio-email">Email</label>
+            </div>
+            <div>
+              <input type="radio" name="contacto" value="telefono" id="radio-telefono">
+              <label for="radio-telefono">Teléfono</label>
+            </div>
+            <div>
+              <input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>
+              <label for="radio-whatsapp">Whatsapp</label>
+            </div>
           </fieldset>
 
           <fieldset>
-            <legend>¿En cual horario prefiere ser atendido?</legend>
+            <legend>¿En cuál horario prefiere ser atendido?</legend>
             <select>
               <option>Mañana</option>
               <option>Tarde</option>
@@ -134,30 +125,29 @@
             </select>
           </fieldset>
 
-
-          <div class="checkbox"><input type="checkbox">
-            ¿Le gutaría recibir novedades de la
-            Barbería ByAlex?
-            <div><input type="checkbox" id="privacidad" name="privacidad">
-              <label for="privacidad"> He leído y acepto la
-                <u>Politica de privacidad</u> </label><br><br>
-              <small>Error mensaje</small>
-            </div>
+          <div class="checkbox">
+            <input type="checkbox">
+            <label>¿Le gustaría recibir novedades de la Barbería ByAlex?</label>
           </div>
-          <!-- Agregamos el boton de enviar  -->
-          <div>
+          <div class="checkbox">
+            <input type="checkbox" id="privacidad" name="privacidad">
+            <label class="label-privacidad" for="privacidad"> He leído y acepto la <u>Política de privacidad</u> </label>
+            <small>Error mensaje</small>
+          </div>
+          <!-- Agregamos el botón de enviar -->
+          <div class="caja-enviar">
             <input type="submit" value="Enviar" id="enviar">
             <input type="reset" value="Borrar" id="borrar">
           </div>
           <div>
-            <div class="table">
+            <table class="table">
               <thead>
                 <tr>
                   <th>Día</th>
                   <th>Horario</th>
                 </tr>
               </thead>
-              <div>
+              <tbody>
                 <tr>
                   <td>Lunes</td>
                   <td>08h ~ 20h</td>
@@ -170,20 +160,16 @@
                   <td>Viernes</td>
                   <td>08h ~ 20h</td>
                 </tr>
-              </div>
-            </div>
+              </tbody>
+            </table>
           </div>
         </fieldset>
       </form>
     </main>
   </div>
-  </tbody>
-  </table>
-  </main>
-  </div>
-  <!-- El pie de pagina -->
-  <footer class="footer" id="contact">
 
+  <!-- El pie de página -->
+  <footer class="footer" id="contact">
     <div class="box-container">
       <div class="content">
         <a href="#"><img src="../imagenes/logo.png" alt="Logo" class="logo" width="220" height="280"></a>
