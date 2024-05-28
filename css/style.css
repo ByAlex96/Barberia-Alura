@@ -104,7 +104,6 @@ nav a:hover {
 
 .principal {
     padding: 3em 0;
-    background: #FEFEFE;
     width: 100%;
     height: auto;
 }
@@ -135,12 +134,15 @@ nav a:hover {
     margin: 0 20px 20px 0;
 }
 
+.main-index {
+    background: linear-gradient(#FEFEFE, #181616);
+}
 
 .diferenciales {
     width: 100%;
     height: auto;
     padding: 3em 0;
-    background: linear-gradient(#FEFEFE, #181616);
+
 }
 
 .contenido-diferenciales {
@@ -204,7 +206,7 @@ nav a:hover {
 }
 
 
-main section {
+.sectionGrid {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,24 +272,28 @@ main section {
 }
 
 /* Estilos generales de la sección de noticias */
+
 .caja-noticias {
-    width: 100%;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    min-width: 100%;
+    padding: 0 0 30px 0;
 }
 
 #noticias {
-    width: 90%;
-    height: 90%;
+    width: 800px;
+    max-height: 750px;
     border-radius: 5px;
-    border: 1px solid black;
-    position: relative;
-
 }
 
 .noticia {
+    display: flex;
+    flex-direction: column-reverse;
     width: 800px;
-    height: 500px;
-
+    height: 100%;
     margin-bottom: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -295,16 +301,18 @@ main section {
 }
 
 .imagen-noticia {
-    width: 100%;
+    width: 800px;
+    height: 450px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
-.img {
-    width: 80%;
-    height: 80%;
+.imagen-noticia img {
+    width: auto;
+    height: 95%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    position: relative;
 }
 
 .contenido-noticia {
@@ -313,6 +321,7 @@ main section {
 
 .titulo-noticia {
     font-weight: bold;
+    font-size: 20px;
     color: #333;
     margin-bottom: 10px;
 }
@@ -865,7 +874,7 @@ th {
         width: 80%;
     }
 
-    main section {
+    .sectionGrid {
         width: 100%;
         height: auto;
     }
@@ -940,8 +949,25 @@ th {
 
     #noticias {
         width: 90%;
-        border: 1px solid black;
         border-radius: 5px;
         position: relative;
+    }
+
+    .noticia {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 95%;
+        height: 95%;
+        margin-bottom: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .imagen-noticia {
+        width: 95%;
+        height: 95%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
 }

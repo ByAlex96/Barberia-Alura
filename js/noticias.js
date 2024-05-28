@@ -53,7 +53,7 @@ function actualizarNoticias() {
 }
 
 // Actualizar las noticias automáticamente cada 2 segundos
-setInterval(actualizarNoticias, 2000);
+setInterval(actualizarNoticias, 200000);
 
 // Obtener datos de noticias al cargar la página
 obtenerNoticias();
