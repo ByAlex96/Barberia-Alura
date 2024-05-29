@@ -910,7 +910,7 @@ th {
         border-radius: 5px;
         padding: .1rem;
         font-size: 100%;
-        margin: .1rem;
+        margin: 1rem 0 0;
 
     }
 
@@ -919,7 +919,7 @@ th {
         display: block;
         width: 90%;
         height: 0.1rem;
-        margin-bottom: 15%;
+        margin-top: 15%;
         line-height: 30px;
     }
 
