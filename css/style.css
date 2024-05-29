@@ -47,26 +47,36 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .caja {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: flex-start;
     width: 100%;
-    position: relative;
-    margin: 0 auto;
     height: 100%;
+    min-width: 50%;
+    min-height: 50%;
+
 }
+
+.titulo-h1 {
+    display: none;
+}
+
 
 .caja .selecter a.active {
     border-color: #088c19;
 }
 
-.caja a img {
+.caja div {
+    width: 20%;
+}
+
+.caja div img {
     display: block;
     cursor: pointer;
-    height: 130px;
-    width: 130px;
-    margin: .5rem .5rem .5rem;
+    height: 4rem;
+    width: 3rem;
 }
 
 nav {
@@ -876,7 +886,7 @@ th {
         align-items: flex-start;
         padding: 10px;
         width: 100%;
-        height: 60px;
+        height: 19%;
     }
 
     .logo {
@@ -913,24 +923,21 @@ th {
         line-height: 30px;
     }
 
-    header div {
-        top: 100;
-    }
 
-    .caja {
+    .titulo-h1 {
         display: block;
-        width: 100%;
-        height: 100%;
-        min-width: 50%;
-        min-height: 50%;
+        font-family: "Lobster", sans-serif !important;
+        text-align: center;
+        font-size: 2.5em;
+        clear: left;
+        font-weight: bold;
     }
 
-    .caja div img {
-        display: block;  
-        cursor: pointer;
-        height: 4rem;
-        width: 4rem;
+    .caja div {
+        width: 12%;
+        height: 100%;
     }
+
 
     .checkbtn {
         display: block;
