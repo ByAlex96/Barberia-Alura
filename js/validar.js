@@ -162,13 +162,17 @@ function actualizarExtrasPrecio() {
 
 function actualizarPrecioFinal() {
     let discount = 0;
+    let discountPercentage = 0;
     const plazo1 = parseInt(plazo.value);
     if (plazo1 > 0 && plazo1 <= 30) {
         discount = 0.05; // 5% de descuento para entregas dentro de 30 días
+        discountPercentage = 5;
     } else if (plazo1 > 30 && plazo1 <= 60) {
         discount = 0.1; // 10% de descuento para entregas dentro de 60 días
+        discountPercentage = 10;
     } else if (plazo1 > 60) {
         discount = 0.15; // 15% de descuento para entregas más allá de 60 días
+        discountPercentage = 15;
     }
     const precioConExtras = precioTotal + extrasPrice;
     const precioDescuento = precioConExtras * discount;
