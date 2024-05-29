@@ -72,7 +72,7 @@ header {
 nav {
     position: absolute;
     top: 80px;
-    right: 0;
+    right: 4%;
 }
 
 nav li {
@@ -677,6 +677,7 @@ th {
     padding: 20px 0;
     background-size: cover;
     background-position: center center;
+    padding: .5rem;
 }
 
 /*Utilizamos grid para organizar de la mejor manera los contenedores del .box-container*/
@@ -891,35 +892,27 @@ th {
         top: -50px;
     }
 
-    nav ul li a {
+    .ul-header li a {
         text-transform: uppercase;
         color: #000000;
         font-weight: bold;
-        font-size: 12px;
         text-decoration: none;
         border: 2px solid;
         border-radius: 5px;
-        padding: 1rem;
+        padding: .1rem;
+        font-size: 100%;
+        margin: .1rem;
+
     }
 
-    nav ul {
 
-        width: 100%;
-        margin: 0px;
+    .ul-header li {
+        display: block;
+        width: 90%;
+        height: 0.1rem;
+        margin-bottom: 15%;
+        line-height: 30px;
     }
-
-    nav ul li {
-        width: 100%;
-        height: 10px;
-        margin: .2rem;
-        gap: 10px;
-    }
-
-    nav ul li a {
-        font-size: 12px;
-        padding: 6px 8px;
-    }
-
 
     header div {
         top: 100;
@@ -943,26 +936,19 @@ th {
         display: block;
     }
 
-    ul {
+    .ul-header {
         position: fixed;
-        width: 100%;
+        width: 70%;
         height: 100vh;
-        background: #2c3e50;
+        background: #BBBBBB;
         top: 80px;
         left: -100%;
-        text-align: center;
+        text-align: right;
         transition: all .5s;
     }
 
-    nav ul li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
 
-    nav ul li a {
-        font-size: 20px;
-    }
+
 
     li a:hover,
     li a.active {
@@ -972,6 +958,7 @@ th {
 
     #check:checked~ul {
         left: -130px;
+        background-color: #BBBBBB;
     }
 
 
